@@ -12,7 +12,7 @@
     <script src="https://use.fontawesome.com/5d4907bbd8.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body class="">
+<body>
 <header class="mobile-header container" style="display: none;">
     <div class="mobile-header__items">
         <a class="mobile-header__item logo" href="#">T&K</a>
@@ -39,16 +39,16 @@
 </header>
 <header class="header container">
     <div class="header__nav nav">
-        <ul class="nav__items">
+        <ul class="nav__items nav__items--left-side">
             <li class="nav__item"><a class="nav__item--link" href="#">О НАС</a></li>
             <li class="nav__item"><a class="nav__item--link" href="#">НАША ИСТОРИЯ</a></li>
             <li class="nav__item"><a class="nav__item--link" href="#">ГДЕ И КОГДА</a></li>
             <li class="nav__item"><a class="nav__item--link" href="#">ПРОГРАММА</a></li>
         </ul>
-        <ul class="nav__items">
-            <li class="nav__item nav__item--logo"><a class="nav__item--link logo" href="#">T&K</a></li>
+        <ul class="nav__items nav__items--center">
+            <li class="nav__item"><a class="nav__item--link nav__item--logo logo" href="#">T&K</a></li>
         </ul>
-        <ul class="nav__items">
+        <ul class="nav__items nav__items--right-side">
             <li class="nav__item"><a class="nav__item--link" href="#">УЧАСТИЕ</a></li>
             <li class="nav__item"><a class="nav__item--link" href="#">ГОСТИ</a></li>
             <li class="nav__item"><a class="nav__item--link" href="#">ПОДАРКИ</a></li>
@@ -57,23 +57,92 @@
         </ul>
     </div>
 </header>
+<div class="title-block">
 
-<div class="content slider">
-    <div class="slider__slides">
-        <div class="slider__slide slide">
-            <div class="slider__img">
-                <img src="img/slider_1.jpg" alt="kiruhaItanuha">
+    <h1 class="title-block__text main-title">
+        <span class="main-title__item border border--top border--bottom">Танюха</span>
+        <span class="main-title__item icn-heart"></span>
+        <span class="main-title__item border border--top border--bottom">Кирюха</span>
+    </h1>
+    <h3 class="title-block__text sub-title">Нам очень нужна поддержка наших родных и друзей в этот чудесный день. Если
+        вы
+        читаете этот текст — значит вы один из тех замечательных людей, с которыми мы хотим разделить наше
+        счастье.</h3>
+    <span class="title-block__icn-flower icn-flower"></span>
+
+</div>
+
+<div class="content container">
+    <div class="date-timer">
+        <div class="date-timer__title date-timer-title main-title">МЫ ЖЕНИМСЯ</div>
+        <div class="date-timer__final-date date-timer-final-date sub-title" data-final-date="16/9/2017"> 16 сентября
+            2017 года
+        </div>
+        <div class="date-timer__time-left date-timer-time-left">
+            <div class="time-left">
+                <div class="time-left__time" data-left-days="111">111</div>
+                <div class="time-left__title">дней</div>
             </div>
-            <div class="slider__text">
-                <h1 class="main-title">Танюха<span class="icn-heart"></span>Кирюха</h1>
-                <h3 class="sub-title">Нам очень нужна поддержка наших родных и друзей в этот чудесный день. Если вы
-                    читаете этот текст — значит вы один из тех замечательных людей, с которыми мы хотим разделить наше
-                    счастье.</h3>
-                <span class="icn-flower"></span>
+            <div class="time-left">
+                <div class="time-left__time" data-left-hours="10">10</div>
+                <div class="time-left__title">часов</div>
+            </div>
+            <div class="time-left">
+                <div class="time-left__time" data-left-minutes="55">55</div>
+                <div class="time-left__title">минут</div>
+            </div>
+            <div class="time-left">
+                <div class="time-left__time" data-left-seconds="05">05</div>
+                <div class="time-left__title">секунд</div>
             </div>
         </div>
     </div>
 </div>
+
+<div class="content container">
+    <div class="about-us">
+        <div class="about-us__items">
+            <div class="about-us__item about-us-img">
+                <img src="img/about_m.jpg" alt="kiruha">
+            </div>
+            <div class="about-us__item about-us-descriptions">
+                <div class="about-us-descriptions__description about-us-description--status">Жених</div>
+                <div class="about-us-descriptions__description about-us-description--name">Кирилл<br>Василевский</div>
+                <div class="about-us-descriptions__description about-us-description--about">Ну вот мы и подошли к новому рубежу нашей жизни. С трепетом
+                    ожидаю момента, когда одену кольцо на палец своей невесты. Немного волнительно все это. Cчастье
+                    переполняет,ведь это именно то, чего мы так давно ждали.
+                </div>
+                <div class="about-us-descriptions__description about-us-description--social-networks social-networks">
+                    <a class="social-network social-network--link" href="#"><i class="fa fa-instagram"></i></a>
+                    <a class="social-network social-network--link" href="#"><i class="fa fa-facebook"></i></a>
+                    <a class="social-network social-network--link" href="#"><i class="fa fa-vk"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-us__items">
+            <div class="about-us__item about-us-img">
+                <img src="img/about_f.jpg" alt="tanuha">
+            </div>
+            <div class="about-us__item about-us-descriptions">
+                <div class="about-us-descriptions__description about-us-description--status">Невеста</div>
+                <div class="about-us-descriptions__description about-us-description--name">Татьяна<br>Калинина</div>
+                <div class="about-us-descriptions__description about-us-description--about">Очень скоро наступит тот день, когдая официально смогу
+                    назвать своего любимого Кирилла законным супругом. Мы долго шлик этому и тщательно готовились к
+                    свадьбе. Надеюсь, что гости оценят наши старанияи все пройдет на ура!…
+                </div>
+                <div class="about-us-descriptions__description about-us-description--social-networks social-networks">
+                    <a class="social-network social-network--link" href="#"><i class="fa fa-instagram"></i></a>
+                    <a class="social-network social-network--link" href="#"><i class="fa fa-facebook"></i></a>
+                    <a class="social-network social-network--link" href="#"><i class="fa fa-vk"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
 </body>
 <script src="scripts/main.js"></script>
 </html>
