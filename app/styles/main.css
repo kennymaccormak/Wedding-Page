@@ -356,7 +356,7 @@ a {
 /*content => slider*/
 
 .title-block {
-    background: url("../img/slider_1.jpg") no-repeat 0 0;
+    background: url("../img/slider_1.jpg") no-repeat center center;
     background-size: cover;
     text-align: center;
     padding-top: 240px;
@@ -366,9 +366,10 @@ a {
 
 .title-block__text {
     text-align: center;
+    text-transform: uppercase;
     display: block;
     margin: 0 auto;
-    width: 30%;
+    width: 50%;
 }
 
 .main-title {
@@ -392,15 +393,16 @@ a {
 }
 
 .main-title__item.icn-heart {
-    margin: 0 4%;
+    margin: 0 2%;
 }
 
 .sub-title {
     color: #fff;
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1rem;
+    line-height: 1.2rem;
     text-align: center;
+    text-transform: none;
     margin-top: 70px;
 }
 
@@ -478,12 +480,14 @@ a {
 /*content => about-us*/
 
 .about-us {
-    width: 83%;
+    background: #f6f6f6;
+    width: 100%;
     margin: 0 auto;
 }
 
 .about-us__items {
-    width: 100%;
+    width: 83%;
+    margin: 0 auto;
 }
 
 .about-us__items:after {
@@ -538,7 +542,7 @@ a {
     padding: 0 0 0 10%;
 }
 
-.about-us-descriptions__description:first-child {
+.about-us-descriptions__description:nth-child(2) {
     padding: 0;
 }
 
@@ -601,7 +605,7 @@ a {
     padding: 0 10% 0 0;
 }
 
-.about-us__items:nth-child(2n) .about-us-descriptions__description:first-child {
+.about-us__items:nth-child(2n) .about-us-descriptions__description:nth-child(2) {
     padding: 0;
 }
 
