@@ -227,6 +227,10 @@ a {
     top: 83px;
 }
 
+.mobile-header__nav--active {
+    display: block;
+}
+
 .mobile-header .nav__items {
     float: none;
     margin: 0 auto;
