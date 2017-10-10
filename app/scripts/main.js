@@ -58,8 +58,25 @@ function Timer(selector) {
 
 }
 
+function Gallery(selector) {
+    var g = $(this);
+
+    g.galery = $(selector);
+    g.galeryGroups = g.galery.find(".gallery-group");
+    g.showMoreBtnWrap = g.galery.find(".gallery-buttons");
+    g.showMoreBtn = g.showMoreBtnWrap.find(".gallery-button--show-more");
+
+    g.showMoreImgs = function () {
+        g.galeryGroups.css({"display": "block"});
+        g.showMoreBtnWrap.css({"display": "none"});
+    };
+
+    g.showMoreBtn.click(g.showMoreImgs);
+}
+
 
 $(function () {
     toggleNavigation(".mobile-header");
-    var timer1 = new Timer('#marriedDate');
+    var timer1 = new Timer("#marriedDate");
+    var gallery1 = new Gallery("#relatives")
 });

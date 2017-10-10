@@ -315,6 +315,15 @@
         height: auto;
         max-height: none;
     }
+
+    .gallery-group {
+        display: none;
+    }
+
+    .gallery-group:first-child,
+    .gallery-buttons {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 470px) {
