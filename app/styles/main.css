@@ -405,8 +405,8 @@ a {
 .main-title {
     color: #fff;
     font-family: "Cormorant", sans-serif;
-
-    font-weight: 500;
+    font-size: 2.4rem;
+    font-weight: 600;
     text-align: center;
     text-transform: uppercase;
 }
@@ -732,7 +732,7 @@ a {
     display: block;
 }
 
-.event__item{
+.event__item {
     float: left;
     width: 50%;
 }
@@ -816,16 +816,113 @@ a {
     margin-right: 95px;
 }
 
+/*end*/
 
+/*content => history*/
 
+.relatives {
+    background: #f6f6f6;
+}
 
+.relatives__text {
+    color: #414141;
+    text-align: center;
+    line-height: 3rem;
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+}
 
+.relatives__text.sub-title {
+    color: #606060;
+    font-weight: 100;
+    line-height: 1.5rem;
+    margin-top: 20px;
+}
 
+.relatives-gallery {
+    margin-top: 75px;
+}
 
+.gallery {
+    width: 100%;
+}
 
+.gallery-group {
+    width: 100%;
+}
 
+.gallery-group:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.gallery-item {
+    float: left;
+    position: relative;
+    width: 25%;
+    max-height: 340px;
+}
+
+.gallery-item__img {
+    width: 100%;
+    height: auto;
+    max-height: 340px;
+}
+
+.gallery-item__layout {
+    top: 0;
+    left: 0;
+}
+
+.gallery-item-layout {
+    background: rgba(40, 40, 40, .5);
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+}
+
+.gallery-item-layout__description {
+    display: block;
+    padding: 0 3%;
+    position: absolute;
+    bottom: 46px;
+    left: 0;
+}
+
+.gallery-item-layout__description--name {
+    color: #fffcf4;
+    font-family: "Cormorant", sans-serif;
+    font-size: 2.3rem;
+    font-weight: 600;
+    line-height: 2.6rem;
+    text-align: center;
+}
+
+.gallery-item-layout__description--status {
+    color: #fffcf4;
+    font-size: 1.06rem;
+    font-weight: 400;
+    line-height: 1.86rem;
+    text-align: center;
+}
+
+.gallery-item:hover .gallery-item-layout {
+    opacity: 1;
+}
 
 /*end*/
+
+/*content => history*/
+
+
 
 /*footer*/
 

@@ -45,8 +45,12 @@ function Timer(selector) {
         t.minutes.text(timerObj.minutes);
         t.seconds.text(('0' + timerObj.seconds).slice(-2));
 
-        if(timerObj.leftDate<=0){
+        if (timerObj.leftDate <= 0) {
             clearInterval(timeInterval);
+            t.days.text("00");
+            t.hours.text("00");
+            t.minutes.text("00");
+            t.seconds.text("00");
         }
     };
     t.setTimeLeft();
