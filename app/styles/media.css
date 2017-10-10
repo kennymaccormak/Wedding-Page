@@ -57,6 +57,79 @@
     .about-us-description--social-networks {
         padding-top: 10px;
     }
+
+    .history-head__text {
+        width: 40%;
+    }
+
+    .history-events:after {
+        display: none;
+    }
+
+    .history-event {
+        min-height: 0;
+    }
+
+    .history-event:after {
+        display: none;
+    }
+
+    .event__item,
+    .history-event:nth-child(2n) .event__item {
+        float: none;
+        width: 100%;
+    }
+
+    .event-photo--img,
+    .history-event:nth-child(2n) .event-photo--img,
+    .event-descriptions__title,
+    .event-descriptions__description,
+    .history-event:nth-child(2n) .event-descriptions__title,
+    .history-event:nth-child(2n) .event-descriptions__description{
+        margin: 0;
+    }
+
+    .event-photo--img,
+    .history-event:nth-child(2n) .event-photo--img{
+        width: 100%;
+        height: auto;
+    }
+
+    .history-event:nth-child(2n) .event-date,
+    .event-date {
+        line-height: 90px;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+        width: 90px;
+        top: -51px;
+        left: 0;
+    }
+
+    .event-date__day {
+        position: absolute;
+        margin-top: 0;
+        top: 26px;
+        left: 29px;
+    }
+
+    .event-date__date {
+        position: absolute;
+        top: 46px;
+        left: 29px;
+    }
+
+    .history-event:nth-child(2n) .event-descriptions,
+    .event-descriptions {
+        text-align: center;
+        width: 70%;
+        margin: 0 auto 90px;
+    }
+
+    .history-event:nth-child(2n) .event-descriptions__description,
+    .event-descriptions__description {
+        margin-top: 15px;
+    }
 }
 
 @media screen and (max-width: 830px) {
@@ -201,6 +274,13 @@
 
     .sub-title {
         width: 90%;
+    }
+
+    .history-event:nth-child(2n) .event-descriptions,
+    .event-descriptions {
+        text-align: center;
+        width: 90%;
+        margin: 0 auto 90px;
     }
 }
 

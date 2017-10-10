@@ -40,6 +40,13 @@ a {
     padding-bottom: 75px;
 }
 
+.button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
 .border {
 }
 
@@ -818,7 +825,7 @@ a {
 
 /*end*/
 
-/*content => history*/
+/*content => relatives*/
 
 .relatives {
     background: #f6f6f6;
@@ -918,11 +925,71 @@ a {
     opacity: 1;
 }
 
+.gallery-buttons {
+    display: none;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.gallery-button {
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 40px;
+    padding: 0 25px;
+}
+
+.gallery-button--show-more {
+    background: #f05f75;
+    -webkit-box-shadow: 0 3px 0 0 rgba(201, 69, 89, 0.004);
+    -moz-box-shadow: 0 3px 0 0 rgba(201, 69, 89, 0.004);
+    box-shadow: 0 3px 0 0 rgba(201, 69, 89, 0.004);
+    color: #fffcf4;
+
+}
+
 /*end*/
 
-/*content => history*/
+/*content => relatives*/
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*end*/
 
 /*footer*/
 
