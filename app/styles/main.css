@@ -898,8 +898,8 @@ a {
 
 .gallery-item-layout__description {
     display: block;
-    padding: 0 3%;
     position: absolute;
+    width: 100%;
     bottom: 46px;
     left: 0;
 }
@@ -911,6 +911,7 @@ a {
     font-weight: 600;
     line-height: 2.6rem;
     text-align: center;
+    padding: 0 3%;
 }
 
 .gallery-item-layout__description--status {

@@ -3,6 +3,11 @@
         font-size: 14px;
         line-height: 20px;
     }
+
+    .gallery {
+        margin: 75px auto 0;
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 1100px) {
@@ -85,12 +90,12 @@
     .event-descriptions__title,
     .event-descriptions__description,
     .history-event:nth-child(2n) .event-descriptions__title,
-    .history-event:nth-child(2n) .event-descriptions__description{
+    .history-event:nth-child(2n) .event-descriptions__description {
         margin: 0;
     }
 
     .event-photo--img,
-    .history-event:nth-child(2n) .event-photo--img{
+    .history-event:nth-child(2n) .event-photo--img {
         width: 100%;
         height: auto;
     }
@@ -129,6 +134,18 @@
     .history-event:nth-child(2n) .event-descriptions__description,
     .event-descriptions__description {
         margin-top: 15px;
+    }
+
+    .relatives__text {
+        width: 100%;
+    }
+
+    .gallery {
+        width: 100%;
+    }
+
+    .gallery-item {
+        width: 50%;
     }
 }
 
@@ -251,6 +268,16 @@
     .footer-logo {
         width: 20%;
     }
+
+    .gallery {
+        width: 500px;
+    }
+
+    .gallery-item,
+    .gallery-item__img {
+        max-height: 250px;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -260,6 +287,33 @@
 
     .date-timer-time-left {
         width: 90%;
+    }
+
+    .gallery {
+        width: 480px;
+    }
+
+    .gallery-item,
+    .gallery-item__img {
+        max-height: 250px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .gallery {
+        width: 90%;
+    }
+
+    .gallery-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .gallery-item,
+    .gallery-item__img {
+        height: auto;
+        max-height: none;
     }
 }
 
@@ -286,7 +340,7 @@
 
 @media screen and (max-width: 410px) {
 
-    .content{
+    .content {
         padding: 60px 0 0 0;
     }
 
@@ -298,6 +352,7 @@
         padding-top: 70px;
         height: 370px;
     }
+
     .main-title__item {
         display: block;
         text-align: center;
@@ -336,6 +391,10 @@
     .about-us__items:nth-child(2n) .about-us__item,
     .about-us__item {
         width: 100%;
+    }
+
+    .relatives__text.main-title {
+        font-size: 2.1rem;
     }
 
     .footer-logo--mobile {
