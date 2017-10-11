@@ -101,7 +101,6 @@ function PlacesSlider(selector) {
     s.navItems.click(s.changeSlide);
 }
 
-
 $(function () {
     toggleNavigation(".mobile-header");
     var timer1 = new Timer("#marriedDate");

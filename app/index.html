@@ -371,22 +371,26 @@
             <div class="time-and-place-item">
                 <table class="table time-and-place__table">
                     <tbody class="table-body">
-                        <tr class="table-row">
-                            <td class="table-cell"><span class="icn-calendar"></span></td>
-                            <td class="table-cell"><p>Суббота</p><p>16 сентабря 2017 года</p></td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="table-cell"><span class="icn-clock"></span></td>
-                            <td class="table-cell"><p>12:00</p></td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="table-cell"><span class="icn-address"></span></td>
-                            <td class="table-cell"><p>Адмирал Клуб</p><p>ул. Варшавская, 116, г. Ирпень</p></td>
-                        </tr>
+                    <tr class="table-row">
+                        <td class="table-cell"><span class="icn-calendar"></span></td>
+                        <td class="table-cell"><p>Суббота</p>
+                            <p>16 сентабря 2017 года</p></td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-cell"><span class="icn-clock"></span></td>
+                        <td class="table-cell"><p>12:00</p></td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-cell"><span class="icn-address"></span></td>
+                        <td class="table-cell"><p>Адмирал Клуб</p>
+                            <p>ул. Варшавская, 116, г. Ирпень</p></td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
             <div class="time-and-place__map time-and-place-item" id="event1Map"></div>
+            <input type="text" hidden id="event1MapLat" value="50.456524">
+            <input type="text" hidden id="event1MapLng" value="30.637878">
         </div>
 
         <div class="time-and-place__place" id="event2">
@@ -395,7 +399,8 @@
                     <tbody class="table-body">
                     <tr class="table-row">
                         <td class="table-cell"><span class="icn-calendar"></span></td>
-                        <td class="table-cell"><p>Суббота</p><p>16 сентабря 2017 года</p></td>
+                        <td class="table-cell"><p>Суббота</p>
+                            <p>16 сентабря 2017 года</p></td>
                     </tr>
                     <tr class="table-row">
                         <td class="table-cell"><span class="icn-clock"></span></td>
@@ -403,12 +408,15 @@
                     </tr>
                     <tr class="table-row">
                         <td class="table-cell"><span class="icn-address"></span></td>
-                        <td class="table-cell"><p>Адмирал Клуб</p><p>ул. Варшавская, 116, г. Ирпень</p></td>
+                        <td class="table-cell"><p>Адмирал Клуб</p>
+                            <p>ул. Варшавская, 116, г. Ирпень</p></td>
                     </tr>
                     </tbody>
                 </table>
             </div>
             <div class="time-and-place__map time-and-place-item" id="event2Map"></div>
+            <input type="text" hidden id="event2MapLat" value="50.472378">
+            <input type="text" hidden id="event2MapLng" value="30.506057">
         </div>
 
         <div class="time-and-place__place" id="event3">
@@ -417,7 +425,8 @@
                     <tbody class="table-body">
                     <tr class="table-row">
                         <td class="table-cell"><span class="icn-calendar"></span></td>
-                        <td class="table-cell"><p>Суббота</p><p>16 сентабря 2017 года</p></td>
+                        <td class="table-cell"><p>Суббота</p>
+                            <p>16 сентабря 2017 года</p></td>
                     </tr>
                     <tr class="table-row">
                         <td class="table-cell"><span class="icn-clock"></span></td>
@@ -425,12 +434,15 @@
                     </tr>
                     <tr class="table-row">
                         <td class="table-cell"><span class="icn-address"></span></td>
-                        <td class="table-cell"><p>Адмирал Клуб</p><p>ул. Варшавская, 116, г. Ирпень</p></td>
+                        <td class="table-cell"><p>Адмирал Клуб</p>
+                            <p>ул. Варшавская, 116, г. Ирпень</p></td>
                     </tr>
                     </tbody>
                 </table>
             </div>
             <div class="time-and-place__map time-and-place-item" id="event3Map"></div>
+            <input type="text" hidden id="event3MapLat" value="50.447464">
+            <input type="text" hidden id="event3MapLng" value="30.521920">
         </div>
     </div>
 </div>
@@ -472,5 +484,30 @@
     </div>
 </footer>
 </body>
+
 <script src="scripts/main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGNCIsl2nCw-Xfac-MVjnYbeMkR1yxSsU&callback=initMap"
+        async defer></script>
+<script>
+    var map1;
+    var map3;
+    var map2;
+    function initMap() {
+        map1 = new google.maps.Map(document.getElementById('event1Map'), {
+            center: {lat: parseFloat($("#event1MapLat").val()), lng: parseFloat($("#event1MapLng").val())},
+            zoom: 15
+        });
+        map2 = new google.maps.Map(document.getElementById('event2Map'), {
+            center: {lat: parseFloat($("#event2MapLat").val()), lng: parseFloat($("#event2MapLng").val())},
+            zoom: 15
+        });
+        map3 = new google.maps.Map(document.getElementById('event3Map'), {
+            center: {lat: parseFloat($("#event3MapLat").val()), lng: parseFloat($("#event3MapLng").val())},
+            zoom: 15
+        });
+    }
+</script>
+
+
+<!---->
 </html>
