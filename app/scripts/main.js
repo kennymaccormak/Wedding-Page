@@ -74,9 +74,47 @@ function Gallery(selector) {
     g.showMoreBtn.click(g.showMoreImgs);
 }
 
+function PlacesSlider(selector) {
+    var s = $(this);
+    var count = 0;
+
+    s.slider = $(selector);
+    s.nav = s.slider.find(".time-and-place__menu");
+    s.navItems = s.nav.find(".time-and-place__button");
+    s.slides = s.slider.find(".time-and-place__place");
+
+    s.changeSlide = function () {
+        var event = $(this).data("event");
+
+        s.slides.each(function () {
+            $(this).removeClass("time-and-place__place--active");
+        });
+        $("#" + event).addClass("time-and-place__place--active");
+
+        s.navItems.each(function () {
+            $(this).removeClass("time-and-place-button--active");
+        });
+        $(this).addClass("time-and-place-button--active");
+
+    };
+
+    s.navItems.click(s.changeSlide);
+}
+
 
 $(function () {
     toggleNavigation(".mobile-header");
     var timer1 = new Timer("#marriedDate");
-    var gallery1 = new Gallery("#relatives")
+    var gallery1 = new Gallery("#relatives");
+    var placesSlider = new PlacesSlider(".time-and-place");
+
+    function setActivePlacesSlide() {
+        var slides = $(".time-and-place__place");
+        var slideNavBtn = $(".time-and-place__button");
+        slides.first().addClass("time-and-place__place--active");
+        slideNavBtn.first().addClass("time-and-place-button--active");
+    }
+
+    setActivePlacesSlide();
+
 });

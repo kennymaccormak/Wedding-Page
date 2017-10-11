@@ -29,6 +29,14 @@ a {
     color: inherit;
 }
 
+p {
+    margin: 0;
+}
+
+.table {
+    border-spacing: 0;
+}
+
 /*general*/
 .container {
     max-width: 1170px;
@@ -38,6 +46,16 @@ a {
 .content {
     padding-top: 87px;
     padding-bottom: 75px;
+}
+
+.buttons {
+
+}
+
+.buttons:after {
+    content: '';
+    clear: both;
+    display: block;
 }
 
 .button {
@@ -122,6 +140,62 @@ a {
     top: 0;
     left: 0;
 
+}
+
+.icn-calendar {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 33px;
+}
+
+.icn-calendar:after {
+    content: '';
+    background: url("../img/icon_calendar.png") no-repeat 0 0;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 33px;
+    top: 0;
+    left: 0;
+}
+
+.icn-clock {
+    position: relative;
+    display: inline-block;
+    width: 39px;
+    height: 39px;
+}
+
+.icn-clock:after {
+    content: '';
+    background: url("../img/icon_clock.png") no-repeat 0 0;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    top: 0;
+    left: 0;
+}
+
+.icn-address {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 41px;
+}
+.icn-address:after {
+    content: '';
+    background: url("../img/icon_place.png") no-repeat 0 0;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    width: 32px;
+    height: 41px;
+    top: 0;
+    left: 0;
 }
 
 .social-networks {
@@ -950,45 +1024,115 @@ a {
 
 /*end*/
 
-/*content => relatives*/
+/*content => time-and-place*/
+
+.time-and-place {
+    background: url("../img/bg_places.jpg") no-repeat center;
+    background-size: cover;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    height: 747px;
+}
+
+.time-and-place__text {
+
+}
+
+.time-and-place__menu {
+    text-align: center;
+}
+
+.time-and-place__button {
+
+}
+
+.time-and-place-button {
+    background: transparent;
+    border: 1px solid transparent;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.66rem;
+    padding: 0 10px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.time-and-place__button:nth-child(2) {
+    margin: 0 30px;
+}
+
+.time-and-place-button--active {
+    background: #f05f75;
+}
+
+.time-and-place-button:hover {
+    border-color: #fff;
+}
+
+.time-and-place__places {
+    margin-top: 60px;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.time-and-place__places:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.time-and-place__place {
+    display: block;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.time-and-place__place--active {
+    opacity: 1;
+}
+
+.time-and-place-item {
+    float: left;
+    width: 50%;
+    height: 420px;
+}
+
+.time-and-place__table {
+    margin-top: 60px;
+}
+
+.time-and-place__table .table-row .table-cell:first-child{
+    border-right: 1px solid #e3e3e3;
+}
+
+.time-and-place__table .table-cell {
+    padding: 24px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.time-and-place__table .table-cell p {
+    color: #fefefe;
+    font-size: 1.2rem;
+    line-height: 1.86rem;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.time-and-place__map {
+    background: #b3d4fc;
+    display: block;
+}
 
 /*end*/
 

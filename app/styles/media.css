@@ -147,6 +147,24 @@
     .gallery-item {
         width: 50%;
     }
+
+    .time-and-place {
+        height: auto;
+    }
+
+    .time-and-place__places {
+        height: 900px;
+    }
+
+    .time-and-place-item {
+        float: none;
+        width: 100%;
+    }
+
+    .time-and-place__table {
+        margin: 90px auto 0;
+    }
+
 }
 
 @media screen and (max-width: 830px) {
@@ -303,6 +321,7 @@
 
     .gallery {
         width: 90%;
+        margin-bottom: 75px;
     }
 
     .gallery-item {
@@ -324,6 +343,15 @@
     .gallery-buttons {
         display: block;
     }
+
+    .time-and-place__places.container {
+        width: 100%;
+    }
+
+    .time-and-place.content {
+        padding-bottom: 0;
+    }
+
 }
 
 @media screen and (max-width: 470px) {
@@ -359,7 +387,7 @@
 
     .title-block {
         padding-top: 70px;
-        height: 370px;
+        height: 420px;
     }
 
     .main-title__item {
