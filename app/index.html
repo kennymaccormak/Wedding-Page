@@ -446,6 +446,35 @@
         </div>
     </div>
 </div>
+<div class="content timetable slide slide-timetable">
+    <h2 class="timetable__text main-title">Программа</h2>
+    <h3 class="timetable__text sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+    <div class="timetable__board container">
+        <div class="board__event board-event">
+            <div class="board-event__date">15:00</div>
+            <div class="board-event__title">Начало свадьбы</div>
+            <div class="board-event__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+                aliquam animi cumque delectus dignissimos, doloribus impedit in laborum magni, minima quasi quibusdam
+                sequi sint, vitae!
+            </div>
+        </div>
+        <div class="board__event board-event">
+            <div class="board-event__date">17:00</div>
+            <div class="board-event__title">Конец свадьбы</div>
+            <div class="board-event__description"></div>
+        </div>
+        <div class="board__event board-event">
+            <div class="board-event__date">17:03</div>
+            <div class="board-event__title">Начало свадьбы</div>
+            <div class="board-event__description"></div>
+        </div>
+        <div class="board__event board-event">
+            <div class="board-event__date">21:03</div>
+            <div class="board-event__title">Начало свадьбы</div>
+        </div>
+    </div>
+</div>
+
 
 <footer class="footer">
     <div class="footer__items container">
@@ -492,6 +521,7 @@
     var map1;
     var map3;
     var map2;
+
     function initMap() {
         map1 = new google.maps.Map(document.getElementById('event1Map'), {
             center: {lat: parseFloat($("#event1MapLat").val()), lng: parseFloat($("#event1MapLng").val())},
