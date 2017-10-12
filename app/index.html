@@ -479,23 +479,23 @@
     <div class="container form-container">
         <form action="" method="get" class="form interview__form">
             <div class="form-group">
-                <div class="form-item interview__form-tem">
+                <div class="form-item interview__form-item">
                     <label class="label interview__label label--required" for="name">Ваше имя</label>
                     <input type="text" class="interview__input input" id="name">
                 </div>
-                <div class="form-item interview__form-tem">
+                <div class="form-item interview__form-item">
                     <label class="label interview__label label--required" for="lastName">Ваша фамилия</label>
                     <input type="text" class="interview__input input" id="lastName">
                 </div>
             </div>
             <div class="form-group">
-                <div class="form-item interview__form-tem">
+                <div class="form-item interview__form-item">
                     <label class="label interview__label label--required" for="phone">Номер телефона</label>
                     <input type="text" class="interview__input input" id="phone">
                 </div>
-                <div class="form-item interview__form-tem">
+                <div class="form-item interview__form-item">
                     <label class="label interview__label label--required" for="presence">Присутствие</label>
-                    <div class="select interview__select select--active">
+                    <div class="select interview__select" id="select1"> <!-- / select--active / -->
                         <div class="select__button"></div>
                         <div class="select__chosen-item">Все события</div>
                         <div class="select__drop-down-list drop-down-list">
@@ -506,19 +506,91 @@
                         <input type="text" hidden id="presence">
                     </div>
                 </div>
-
-
-
-
-
             </div>
             <div class="form-group buttons">
-                <button type="submit" class="button button--positive">Показать больше</button>
+                <button type="submit" class="button button--positive">Подтверждаю</button>
             </div>
         </form>
     </div>
 </div>
+<div class="content guests-block slide slide-guests-block">
+    <h2 class="guests__text main-title">ГОСТИ</h2>
+    <h3 class="guests__text sub-title">Nullam notn bibendum dolor. Ut vel turpis accumsan, efficitur dolor fermentum,
+        tincidunt metus.</h3>
 
+    <div class="guests container">
+            <div class="guest">
+                <div class="guest-photo">
+                    <img src="img/guests/g1.jpg" alt="guest">
+                </div>
+                <div class="guest-descriptions">
+                    <div class="guest-descriptions__title">Ольга Толкачева</div>
+                    <div class="guest-descriptions__description">Nullam notn bibendum dolor. Ut vel turpis accumsan,
+                        efficitur dolor fermentum, tincidunt metus
+                    </div>
+                </div>
+            </div>
+            <div class="guest">
+                <div class="guest-photo">
+                    <img src="img/guests/g2.jpg" alt="guest">
+                </div>
+                <div class="guest-descriptions">
+                    <div class="guest-descriptions__title">Ольга Толкачева</div>
+                    <div class="guest-descriptions__description">Nullam notn bibendum dolor. Ut vel turpis accumsan,
+                        efficitur dolor fermentum, tincidunt metus
+                    </div>
+                </div>
+            </div>
+            <div class="guest">
+                <div class="guest-photo">
+                    <img src="img/guests/g3.jpg" alt="guest">
+                </div>
+                <div class="guest-descriptions">
+                    <div class="guest-descriptions__title">Ольга Толкачева</div>
+                    <div class="guest-descriptions__description">Nullam notn bibendum dolor. Ut vel turpis accumsan,
+                        efficitur dolor fermentum, tincidunt metus
+                    </div>
+                </div>
+            </div>
+            <div class="guest">
+                <div class="guest-photo">
+                    <img src="img/guests/g4.jpg" alt="guest">
+                </div>
+                <div class="guest-descriptions">
+                    <div class="guest-descriptions__title">Ольга Толкачева</div>
+                    <div class="guest-descriptions__description">Nullam notn bibendum dolor. Ut vel turpis accumsan,
+                        efficitur dolor fermentum, tincidunt metus
+                    </div>
+                </div>
+            </div>
+            <div class="guest">
+                <div class="guest-photo">
+                    <img src="img/guests/g5.jpg" alt="guest">
+                </div>
+                <div class="guest-descriptions">
+                    <div class="guest-descriptions__title">Ольга Толкачева</div>
+                    <div class="guest-descriptions__description">Nullam notn bibendum dolor. Ut vel turpis accumsan,
+                        efficitur dolor fermentum, tincidunt metus
+                    </div>
+                </div>
+            </div>
+            <div class="guest">
+                <div class="guest-photo">
+                    <img src="img/guests/g6.jpg" alt="guest">
+                </div>
+                <div class="guest-descriptions">
+                    <div class="guest-descriptions__title">Ольга Толкачева</div>
+                    <div class="guest-descriptions__description">Nullam notn bibendum dolor. Ut vel turpis accumsan,
+                        efficitur dolor fermentum, tincidunt metus
+                    </div>
+                </div>
+            </div>
+
+        <div class="guests-buttons">
+            <button type="button" class="button button--positive">Показать больше</button>
+        </div>
+    </div>
+</div>
 <footer class="footer">
     <div class="footer__items container">
 

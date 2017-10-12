@@ -174,6 +174,27 @@
         width: 100%;
     }
 
+    .interview__form {
+        width: 100%;
+    }
+
+    .guests.container {
+        margin-top: 60px;
+    }
+
+    .guest {
+        width: 46%;
+        margin-right: 4%;
+    }
+
+    .guest:nth-child(3n) {
+        margin-right: 4%;
+    }
+
+    .guest:nth-child(2n) {
+        margin-right: 0;
+    }
+
 }
 
 @media screen and (max-width: 830px) {
@@ -371,6 +392,43 @@
         padding-left: 60px;
     }
 
+    .interview__form-item {
+        width: 95%;
+        float: none;
+    }
+
+    .form-group .interview__form-item:first-child {
+        margin-bottom: 30px;
+    }
+
+    .interview__form .buttons {
+        margin-top: 60px;
+        margin-bottom: 0;
+    }
+
+    .guest {
+        width: 100%;
+        display: none;
+        margin-right: 0;
+    }
+
+    .guest:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    .guest:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .guest:nth-child(1),
+    .guest:nth-child(2),
+    .guest:nth-child(3) {
+        display: block;
+    }
+
+    .guests-buttons {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 470px) {

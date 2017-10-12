@@ -97,8 +97,8 @@ p {
     line-height: 56px;
     display: inline-block;
     outline: none;
-    padding: 0 12px;
-    width: 100%;
+    padding: 0 2%;
+    width: 95%;
 }
 
 .select {
@@ -106,9 +106,9 @@ p {
     border: 2px solid #98a6ba;
     border-radius: 5px;
     display: inline-block;
-    padding: 0 12px;
     position: relative;
-    width: 100%;
+    padding: 0 2%;
+    width: 95%;
     height: 56px;
 }
 
@@ -162,7 +162,7 @@ p {
     font-weight: 400;
     line-height: 56px;
     cursor: pointer;
-    padding: 0 12px;
+    padding: 0 2%;
 }
 
 .drop-down-list__item:hover {
@@ -172,10 +172,20 @@ p {
 
 .select--active {
     border-radius: 5px 5px 0 0;
+    border-bottom: none;
 }
 
 .select--active .select__drop-down-list {
     display: block;
+    border-top: none;
+}
+
+.select--active .select__button:after {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .buttons {
@@ -1339,7 +1349,8 @@ p {
 /*content => timetable*/
 
 .interview {
-
+    background: url("../img/bg_interview.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .interview__text {
@@ -1349,9 +1360,11 @@ p {
 }
 
 .interview__form {
+    width: 52%;
+    margin: 0 auto;
 }
 
-.interview__form-tem {
+.interview__form-item {
     float: left;
     width: 45%;
     padding: 0 2.5%;
@@ -1364,6 +1377,88 @@ p {
 }
 
 .interview__select {
+}
+
+.interview__form .buttons {
+    text-align: center;
+}
+
+/*end*/
+
+/*content => timetable*/
+
+.guests-block {
+    background: #eaecf4;
+}
+
+.guests__text {
+    color: #414141;
+}
+
+.guests__text.sub-title {
+    color: #606060;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.guests {
+    margin-top: 65px;
+}
+
+.guests:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.guest {
+    background: #ffffff;
+    display: block;
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+}
+
+.guest:nth-child(3n) {
+    margin-right: 0;
+}
+
+.guest-photo {
+
+}
+
+.guest-photo img {
+    width: 100%;
+    height: auto;
+
+}
+
+.guest-descriptions {
+    padding: 27px 37px 60px;
+}
+
+.guest-descriptions__title {
+    color: #414141;
+    font-family: "Cormorant", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.4rem;
+    text-align: center;
+}
+
+.guest-descriptions__description {
+    color: #606060;
+    font-size: .93rem;
+    font-weight: 300;
+    line-height: 1.4rem;
+    text-align: center;
+    margin-top: 27px;
+}
+
+.guests-buttons {
+    text-align: center;
+    display: none;
 }
 
 /*end*/

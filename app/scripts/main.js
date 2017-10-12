@@ -101,11 +101,35 @@ function PlacesSlider(selector) {
     s.navItems.click(s.changeSlide);
 }
 
+function Select(selector) {
+    var s = $(this);
+
+    s.selectInput = $(selector);
+    s.toggleBtn = s.selectInput.find(".select__button");
+    s.chosenItem = s.selectInput.find(".select__chosen-item");
+    s.dropDownItem = s.selectInput.find(".drop-down-list__item");
+    s.hiddenInput = s.selectInput.find("#presence");
+
+    s.toggleDropDownList = function () {
+        s.selectInput.toggleClass("select--active");
+    };
+
+    s.choose = function () {
+        s.hiddenInput.val($(this).text());
+        s.chosenItem.text($(this).text());
+        s.toggleDropDownList();
+    };
+
+    s.toggleBtn.click(s.toggleDropDownList);
+    s.dropDownItem.click(s.choose);
+}
+
 $(function () {
     toggleNavigation(".mobile-header");
     var timer1 = new Timer("#marriedDate");
     var gallery1 = new Gallery("#relatives");
     var placesSlider = new PlacesSlider(".time-and-place");
+    var select1 = new Select("#select1");
 
     function setActivePlacesSlide() {
         var slides = $(".time-and-place__place");
