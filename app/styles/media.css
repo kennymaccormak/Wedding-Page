@@ -165,6 +165,15 @@
         margin: 90px auto 0;
     }
 
+    .timetable__board {
+        margin-top: 55px;
+    }
+
+    .board__event {
+        margin-left: 0;
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 830px) {
@@ -296,6 +305,9 @@
         max-height: 250px;
     }
 
+    .timetable__board {
+        margin-top: 55px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -321,7 +333,6 @@
 
     .gallery {
         width: 90%;
-        margin-bottom: 75px;
     }
 
     .gallery-item {
@@ -352,6 +363,14 @@
         padding-bottom: 0;
     }
 
+    .board-event__title {
+        margin-left: 100px;
+    }
+
+    .board-event__description {
+        padding-left: 60px;
+    }
+
 }
 
 @media screen and (max-width: 470px) {
@@ -378,7 +397,7 @@
 @media screen and (max-width: 410px) {
 
     .content {
-        padding: 60px 0 0 0;
+        padding: 60px 0;
     }
 
     .mobile-header .nav__items {

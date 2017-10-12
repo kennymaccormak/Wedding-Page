@@ -48,8 +48,137 @@ p {
     padding-bottom: 75px;
 }
 
-.buttons {
+.form-container {
+    width: 100%;
+}
 
+.form {
+    width: 100%;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.form-group:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.label {
+    color: #57667b;
+    font-size: 1.06rem;
+    font-weight: 400;
+    line-height: 2.46rem;
+    cursor: pointer;
+}
+
+.label--required:after {
+    content: '*';
+    color: #57667b;
+    font-size: 1.06rem;
+    font-weight: 400;
+    line-height: 1.46rem;
+    margin-left: 6px;
+}
+
+.input {
+    background: #fff;
+    border: 2px solid #98a6ba;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #414141;
+    font-size: 1.13rem;
+    font-weight: 400;
+    line-height: 56px;
+    display: inline-block;
+    outline: none;
+    padding: 0 12px;
+    width: 100%;
+}
+
+.select {
+    background: #fff;
+    border: 2px solid #98a6ba;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0 12px;
+    position: relative;
+    width: 100%;
+    height: 56px;
+}
+
+.select__button {
+    background: #98a6ba;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 52px;
+    height: 100%;
+}
+
+.select__button:after {
+    content: '';
+    background: url("../img/icon_drpdwn.png") no-repeat 0 0;
+    display: block;
+    margin-top: -6px;
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    height: 12px;
+    width: 18px;
+}
+
+.select__chosen-item {
+    color: #414141;
+    font-size: 1.13rem;
+    font-weight: 400;
+    line-height: 56px;
+    width: 100%;
+}
+
+.select__drop-down-list {
+    display: none;
+}
+
+.drop-down-list {
+    background: #fff;
+    border: 2px solid #98a6ba;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    top: 56px;
+    left: -2px;
+    width: 100%;
+}
+
+.drop-down-list__item {
+    color: #414141;
+    font-size: 1.13rem;
+    font-weight: 400;
+    line-height: 56px;
+    cursor: pointer;
+    padding: 0 12px;
+}
+
+.drop-down-list__item:hover {
+    background: #98a6ba;
+    color: #fff;
+}
+
+.select--active {
+    border-radius: 5px 5px 0 0;
+}
+
+.select--active .select__drop-down-list {
+    display: block;
+}
+
+.buttons {
 }
 
 .buttons:after {
@@ -63,6 +192,18 @@ p {
     border: none;
     cursor: pointer;
     outline: none;
+}
+
+.button--positive {
+    background: #f05f75;
+    -webkit-box-shadow: 0 3px 0 0 rgba(201, 69, 89, 0.004);
+    -moz-box-shadow: 0 3px 0 0 rgba(201, 69, 89, 0.004);
+    box-shadow: 0 3px 0 0 rgba(201, 69, 89, 0.004);
+    color: #fffcf4;
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 40px;
+    padding: 0 25px;
 }
 
 .border {
@@ -1007,22 +1148,6 @@ p {
     text-align: center;
 }
 
-.gallery-button {
-    font-size: .9rem;
-    font-weight: 500;
-    line-height: 40px;
-    padding: 0 25px;
-}
-
-.gallery-button--show-more {
-    background: #f05f75;
-    -webkit-box-shadow: 0 3px 0 0 rgba(201, 69, 89, 0.004);
-    -moz-box-shadow: 0 3px 0 0 rgba(201, 69, 89, 0.004);
-    box-shadow: 0 3px 0 0 rgba(201, 69, 89, 0.004);
-    color: #fffcf4;
-
-}
-
 /*end*/
 
 /*content => time-and-place*/
@@ -1207,6 +1332,38 @@ p {
     padding-left: 103px;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+/*end*/
+
+/*content => timetable*/
+
+.interview {
+
+}
+
+.interview__text {
+    color: #414141;
+    text-transform: none;
+    font-style: italic;
+}
+
+.interview__form {
+}
+
+.interview__form-tem {
+    float: left;
+    width: 45%;
+    padding: 0 2.5%;
+}
+
+.interview__label {
+}
+
+.interview__input {
+}
+
+.interview__select {
 }
 
 /*end*/

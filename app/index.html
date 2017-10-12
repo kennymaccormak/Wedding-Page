@@ -350,7 +350,7 @@
                 </div>
             </div>
             <div class="gallery-buttons">
-                <button type="button" class="gallery-button button gallery-button--show-more">Показать больше</button>
+                <button type="button" class="button button--positive">Показать больше</button>
             </div>
         </div>
 
@@ -474,7 +474,50 @@
         </div>
     </div>
 </div>
+<div class="content interview slide slide-interview">
+    <h2 class="interview__text main-title">Вы придете?</h2>
+    <div class="container form-container">
+        <form action="" method="get" class="form interview__form">
+            <div class="form-group">
+                <div class="form-item interview__form-tem">
+                    <label class="label interview__label label--required" for="name">Ваше имя</label>
+                    <input type="text" class="interview__input input" id="name">
+                </div>
+                <div class="form-item interview__form-tem">
+                    <label class="label interview__label label--required" for="lastName">Ваша фамилия</label>
+                    <input type="text" class="interview__input input" id="lastName">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-item interview__form-tem">
+                    <label class="label interview__label label--required" for="phone">Номер телефона</label>
+                    <input type="text" class="interview__input input" id="phone">
+                </div>
+                <div class="form-item interview__form-tem">
+                    <label class="label interview__label label--required" for="presence">Присутствие</label>
+                    <div class="select interview__select select--active">
+                        <div class="select__button"></div>
+                        <div class="select__chosen-item">Все события</div>
+                        <div class="select__drop-down-list drop-down-list">
+                            <div class="drop-down-list__item">Сoбытие №1</div>
+                            <div class="drop-down-list__item">Сoбытие №2</div>
+                            <div class="drop-down-list__item">Сoбытие №3</div>
+                        </div>
+                        <input type="text" hidden id="presence">
+                    </div>
+                </div>
 
+
+
+
+
+            </div>
+            <div class="form-group buttons">
+                <button type="submit" class="button button--positive">Показать больше</button>
+            </div>
+        </form>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="footer__items container">
