@@ -195,10 +195,21 @@
         margin-right: 0;
     }
 
+    .history-gallery__col {
+        float: none;
+        width: 100%;
+    }
+
+    .history-gallery__item {
+        height: auto !important;
+    }
 }
 
 @media screen and (max-width: 830px) {
     .title-block__text {
+        width: 70%;
+    }
+    .thanks-block__text {
         width: 70%;
     }
 }
@@ -429,6 +440,11 @@
     .guests-buttons {
         display: block;
     }
+
+    .history-gallery.container {
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 470px) {
@@ -480,6 +496,15 @@
         margin: 15px auto;
     }
 
+    .thanks-block__description .main-title__item {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .thanks-block__description .main-title__item.icn-heart {
+        margin: 0;
+    }
+
     .sub-title {
         margin-top: 38px;
         width: 70%;
@@ -509,6 +534,10 @@
 
     .relatives__text.main-title {
         font-size: 2.1rem;
+    }
+
+    .thanks-block__text {
+        width: 90%;
     }
 
     .footer-logo--mobile {
