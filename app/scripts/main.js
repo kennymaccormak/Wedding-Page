@@ -139,4 +139,8 @@ $(function () {
     }
 
     setActivePlacesSlide();
+    $('.wishes-slider').slick({
+        dots: true
+    });
+
 });

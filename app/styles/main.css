@@ -1520,7 +1520,73 @@ p {
     margin: 40px auto;
 }
 
+.wishes-slider {
+    width: 720px;
+    margin: 0 auto;
+}
 
+.wishes-slide {
+    position: relative;
+    background: #f6f6f6;
+    height:274px;
+}
+
+.wishes-slider:before {
+    content: '';
+    display: block;
+    background: url("../img/icon_birds_inverse.png") no-repeat 0 0;
+    position: absolute;
+    width: 86px;
+    height: 53px;
+    top: -53px;
+    right: 24px;
+}
+
+.wishes-slide:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.wishes-slide__item {
+    display: block;
+    float: left;
+}
+
+.wishes-slide__item:last-child {
+    width: 60%;
+}
+
+.wishes-slide__item img {
+    width: auto;
+    height: 100%;
+}
+
+.wishes-slide-item__wishes {
+    color: #464646;
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 50px 20px 0 40px;
+}
+
+.wishes-slide-item__wisher {
+    color: #414141;
+    font-family: "Cormorant", sans-serif;
+    font-size: 1.33rem;
+    font-weight: 600;
+    line-height: 2.33rem;
+    padding: 24px 20px 0 40px;
+}
+
+.wishes-buttons {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.wishes-buttons .button {
+    padding: 0 65px;
+}
 
 
 /*end*/

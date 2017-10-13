@@ -1,0 +1,42 @@
+.slick-arrow {
+    display: block;
+    width: 66px;
+    height: 22px;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-prev {
+    background: url("../img/arrow_left.png") no-repeat 0 0;
+    left: -126px;
+}
+
+.slick-next:hover,
+.slick-next:focus,
+.slick-next {
+    background: url("../img/arrow_right.png") no-repeat 0 0;
+    right: -126px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    display: none;
+}
+
+.slick-dots {
+    bottom: -55px;
+}
+
+.slick-dots li button {
+    background: #b8bfc2;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 14px;
+    width: 24px;
+    height: 24px;
+}
+
+.slick-dots li.slick-active button {
+    background: #989d9f;
+
+}
