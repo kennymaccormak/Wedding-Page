@@ -84,6 +84,32 @@ p {
     margin-left: 6px;
 }
 
+.input-file-wrap {
+    display: inline-block;
+    position: relative;
+}
+
+.input-file-label {
+    color: #57667b;
+    font-size: 1.06rem;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.input-file {
+    opacity: 0;
+    z-index: 1;
+    width: auto;
+    max-width: 120px;
+}
+
 .input {
     background: #fff;
     border: 2px solid #98a6ba;
@@ -100,6 +126,11 @@ p {
     outline: none;
     padding: 0 2%;
     width: 95%;
+}
+
+.input--textarea {
+    height: 150px;
+    resize: none;
 }
 
 .select {
@@ -1484,7 +1515,7 @@ p {
 
 .history-gallery__col {
     float: left;
-    height:700px;
+    height: 700px;
 }
 
 .history-gallery__col--left {
@@ -1528,7 +1559,7 @@ p {
 .wishes-slide {
     position: relative;
     background: #f6f6f6;
-    height:274px;
+    height: 274px;
 }
 
 .wishes-slider:before {
@@ -1588,6 +1619,29 @@ p {
     padding: 0 65px;
 }
 
+/*end*/
+
+/*content => thanks-block*/
+
+.send-wishes-modal {
+}
+
+.send-wishes-modal__form {
+}
+
+.send-wishes-modal__form-item {
+}
+
+.send-wishes-modal__label {
+}
+
+.send-wishes-modal__input {
+}
+
+.send-wishes-modal__button {
+    float: right;
+    padding: 0 70px;
+}
 
 /*end*/
 

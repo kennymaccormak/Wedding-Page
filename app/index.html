@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="libs/slick/slick-theme.css">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/slider.css">
     <link rel="stylesheet" href="styles/media.css">
     <script src="https://use.fontawesome.com/5d4907bbd8.js"></script>
@@ -661,7 +662,7 @@
         </div>
     </div>
     <div class="wishes-buttons">
-        <button type="button" class="button button--positive">Написать</button>
+        <button type="button" class="button button--positive" id="sendWishesButton">Написать</button>
     </div>
 </div>
 
@@ -716,6 +717,37 @@
         </div>
     </div>
 </footer>
+
+<div class="modal send-wishes-modal" id="sendWishesModal">
+    <div class="modal-header">
+        <div class="modal-title">Ваше пожелание</div>
+        <button type="button" class="button modal-header__button button--close-modal"></button>
+    </div>
+    <div class="modal-body">
+        <div class="form-container">
+            <form action="" method="get" class="form send-wishes-modal__form">
+                <div class="form-group">
+                    <div class="form-item send-wishes-modal__form-item">
+                        <label class="label send-wishes-modal__label label--required" for="name">Ваше имя и фамилия</label>
+                        <input type="text" class="send-wishes-modal__input input" id="nameWishes">
+                    </div>
+                    <div class="form-item send-wishes-modal__form-item">
+                        <label class="label send-wishes-modal__label label--required" for="lastName">Текст пожелания</label>
+                        <textarea name="textWisher" id="textWisher" class="send-wishes-modal__input input input--textarea"></textarea>
+                    </div>
+                </div>
+                <div class="form-group buttons">
+                    <div class="input-file-wrap">
+                        <label class="input-file-label" for="addWisherPhoto">Загрузить фото</label>
+                        <input type="file" class="input-file" id="addWisherPhoto">
+                    </div>
+                    <button type="submit" class="send-wishes-modal__button button button--positive">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <!---->
 <script src="libs/slick/slick.min.js"></script>
 <script src="scripts/main.js"></script>

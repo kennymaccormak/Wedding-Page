@@ -1,0 +1,52 @@
+.modal {
+    background: #fffcf4;
+    border: 10px solid #f05f75;
+    display: none;
+    margin-left: -300px;
+    margin-top: -265px;
+    padding: 40px 70px;
+    position: fixed;
+    width: 440px;
+    /*height: 430px;*/
+    top: 50%;
+    left: 50%;
+}
+
+.modal-header {
+}
+
+.modal-title {
+}
+
+.modal-header__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.button--close-modal {
+    background: #f05f75 url("../img/icon_close.png") no-repeat center;
+    width: 25px;
+    height: 25px;
+}
+
+.modal-body {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

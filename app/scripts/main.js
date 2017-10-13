@@ -143,4 +143,12 @@ $(function () {
         dots: true
     });
 
+    $("#sendWishesButton").click(function () {
+        $("#sendWishesModal").show();
+    });
+
+    $(".button--close-modal").click(function () {
+        $(this).closest(".modal").hide();
+    });
+
 });
