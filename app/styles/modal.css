@@ -33,7 +33,21 @@
 .modal-body {
 }
 
+@media screen and (max-width: 660px) {
+    .modal {
+        width: 350px;
+        margin-left: -255px;
+    }
+}
 
+@media screen and (max-width: 550px) {
+    .modal {
+        width: calc(100% - 160px);
+        margin-left: 0;
+        left: 0;
+        min-width: 220px;
+    }
+}
 
 
 

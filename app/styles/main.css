@@ -1625,6 +1625,53 @@ p {
 
 /*end*/
 
+/*content => wishes mobile*/
+
+.mobile-wishes {
+    background: #f6f6f6;
+    display: none;
+}
+
+.wish {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.wish:last-child {
+    margin-bottom: 0;
+}
+
+.wish__item {
+    width: 100%;
+    text-align: center;
+
+}
+
+.wish__item img {
+    width: 60%;
+    height: auto;
+}
+
+.wish-item__wishes {
+    color: #464646;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.4rem;
+    padding: 25px 15px 0;
+}
+
+.wish-item__wisher {
+    color: #414141;
+    font-family: "Cormorant", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: 600;
+    padding: 15px 15px;
+}
+
+/*end*/
+
 /*content => thanks-block*/
 
 .send-wishes-modal {

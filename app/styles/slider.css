@@ -44,3 +44,34 @@
 .slick-dots li button:before {
     display: none;
 }
+
+@media screen and (max-width: 1000px) {
+    .wishes-slider-container.container {
+        max-width: none;
+    }
+
+    .slick-list {
+        overflow: visible;
+    }
+
+    .slick-initialized .slick-slide {
+        margin: 0 50px;
+    }
+
+    .slick-dots,
+    .slick-prev,
+    .slick-next {
+        display: none !important;
+    }
+
+    .wishes-slider:before {
+        right: 66px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .slick-initialized .slick-slide {
+        margin-left: 5px;
+        margin-right: 15px;
+    }
+}

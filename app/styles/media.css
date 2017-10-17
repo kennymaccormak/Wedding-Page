@@ -311,6 +311,35 @@
     .about-us-description--social-networks {
         display: none;
     }
+
+    .wishes-slider {
+        width: 100%;
+    }
+
+    .wishes-slide__item {
+        width: 30%;
+    }
+
+    .wishes-slide__item:last-child {
+        width: 70%;
+    }
+
+    .wishes-slide {
+        height: auto;
+    }
+
+    .wishes-slide__item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .wishes-slide-item__wishes {
+        padding: 10px 10px 0 20px;
+    }
+
+    .wishes-slide-item__wisher {
+        padding: 0px 10px 0 20px;
+    }
 }
 
 @media screen and (max-width: 680px) {
@@ -441,10 +470,42 @@
         display: block;
     }
 
+    .history-gallery-block.content {
+        padding-bottom: 0;
+    }
+
     .history-gallery.container {
         width: 100%;
     }
 
+    .wishes-slider-container {
+        display: none;
+    }
+
+    .mobile-wishes {
+        display: block;
+    }
+
+    .wishes {
+        background: #f6f6f6;
+    }
+
+    .wishes-buttons {
+        margin-top: 20px;
+    }
+
+    .modal .send-wishes-modal__button {
+        float: none;
+        margin-top: 28px;
+    }
+
+    .modal .input-file-wrap {
+        display: block;
+    }
+
+    .form-group.buttons {
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (max-width: 470px) {
