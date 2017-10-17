@@ -40,3 +40,7 @@
     background: #989d9f;
 
 }
+
+.slick-dots li button:before {
+    display: none;
+}

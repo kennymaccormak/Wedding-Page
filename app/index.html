@@ -30,35 +30,35 @@
 
     <div class="mobile-header__nav nav">
         <ul class="nav__items">
-            <li class="nav__item"><a class="nav__item--link" href="#">О НАС</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#">НАША ИСТОРИЯ</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#">ГДЕ И КОГДА</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#">ПРОГРАММА</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#">УЧАСТИЕ</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#">ГОСТИ</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#about-us">О НАС</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#history">НАША ИСТОРИЯ</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#time-and-place">ГДЕ И КОГДА</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#timetable">ПРОГРАММА</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#interview">УЧАСТИЕ</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#guests-block">ГОСТИ</a></li>
             <li class="nav__item"><a class="nav__item--link" href="#">ПОДАРКИ</a></li>
             <li class="nav__item"><a class="nav__item--link" href="#">ГАЛЕРЕЯ</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#">КОНТАКТЫ</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#footer">КОНТАКТЫ</a></li>
         </ul>
     </div>
 </header>
 <header class="header container">
     <div class="header__nav nav">
         <ul class="nav__items nav__items--left-side">
-            <li class="nav__item"><a class="nav__item--link" href="#">О НАС</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#">НАША ИСТОРИЯ</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#">ГДЕ И КОГДА</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#">ПРОГРАММА</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#about-us">О НАС</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#history">НАША ИСТОРИЯ</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#time-and-place">ГДЕ И КОГДА</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#timetable">ПРОГРАММА</a></li>
         </ul>
         <ul class="nav__items nav__items--center">
             <li class="nav__item"><a class="nav__item--link nav__item--logo logo" href="#">T&AMP;K</a></li>
         </ul>
         <ul class="nav__items nav__items--right-side">
-            <li class="nav__item"><a class="nav__item--link" href="#">УЧАСТИЕ</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#">ГОСТИ</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#interview">УЧАСТИЕ</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#guests-block">ГОСТИ</a></li>
             <li class="nav__item"><a class="nav__item--link" href="#">ПОДАРКИ</a></li>
             <li class="nav__item"><a class="nav__item--link" href="#">ГАЛЕРЕЯ</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#">КОНТАКТЫ</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#footer">КОНТАКТЫ</a></li>
         </ul>
     </div>
 </header>
@@ -102,8 +102,9 @@
         </div>
     </div>
 </div>
-<div class="content about-us slide slide-about-us">
-    <div class="container">
+<div class="about-us slide slide-about-us">
+    <a name="#about-us"></a>
+    <div class="container content">
         <div class="about-us__items">
             <div class="about-us__item about-us-img">
                 <img src="img/about_m.jpg" alt="kiruha">
@@ -146,6 +147,7 @@
     </div>
 </div>
 <div class="history slide slide-history">
+    <a name="#history"></a>
     <div class="history-head">
         <div class="history-head__logo"><span class="icn-birds"></span></div>
         <h2 class="history-head__text main-title">
@@ -362,6 +364,7 @@
     </div>
 </div>
 <div class="content time-and-place slide slide-time-and-place">
+    <a name="#time-and-place"></a>
     <h2 class="time-and-place__text main-title">КОГДА И ГДЕ</h2>
     <div class="time-and-place__menu buttons container">
         <button class="button time-and-place__button time-and-place-button" data-event="event1">Венчание</button>
@@ -451,6 +454,7 @@
     </div>
 </div>
 <div class="content timetable slide slide-timetable">
+    <a name="#timetable"></a>
     <h2 class="timetable__text main-title">Программа</h2>
     <h3 class="timetable__text sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
     <div class="timetable__board container">
@@ -479,23 +483,24 @@
     </div>
 </div>
 <div class="content interview slide slide-interview">
+    <a name="#interview"></a>
     <h2 class="interview__text main-title">Вы придете?</h2>
     <div class="container form-container">
-        <form action="" method="get" class="form interview__form">
+        <form action="" method="post" id="interviewForm" class="form interview__form">
             <div class="form-group">
                 <div class="form-item interview__form-item">
                     <label class="label interview__label label--required" for="name">Ваше имя</label>
-                    <input type="text" class="interview__input input" id="name">
+                    <input type="text" class="interview__input input" data-type="text" id="name">
                 </div>
                 <div class="form-item interview__form-item">
                     <label class="label interview__label label--required" for="lastName">Ваша фамилия</label>
-                    <input type="text" class="interview__input input" id="lastName">
+                    <input type="text" class="interview__input input" data-type="text" id="lastName">
                 </div>
             </div>
             <div class="form-group">
                 <div class="form-item interview__form-item">
                     <label class="label interview__label label--required" for="phone">Номер телефона</label>
-                    <input type="text" class="interview__input input" id="phone">
+                    <input type="text" class="interview__input input" data-type="phone" id="phone">
                 </div>
                 <div class="form-item interview__form-item">
                     <label class="label interview__label label--required" for="presence">Присутствие</label>
@@ -507,7 +512,7 @@
                             <div class="drop-down-list__item">Сoбытие №2</div>
                             <div class="drop-down-list__item">Сoбытие №3</div>
                         </div>
-                        <input type="text" hidden id="presence">
+                        <input type="text" hidden id="presence" data-type="select" >
                     </div>
                 </div>
             </div>
@@ -518,6 +523,7 @@
     </div>
 </div>
 <div class="content guests-block slide slide-guests-block">
+    <a name="#guests-block"></a>
     <h2 class="guests__text main-title">ГОСТИ</h2>
     <h3 class="guests__text sub-title">Nullam notn bibendum dolor. Ut vel turpis accumsan, efficitur dolor fermentum,
         tincidunt metus.</h3>
@@ -682,6 +688,7 @@
 
 </div>
 <footer class="footer">
+    <a name="#footer"></a>
     <div class="footer__items container">
 
         <div class="footer__item footer-logo footer-logo--mobile">
@@ -725,11 +732,11 @@
     </div>
     <div class="modal-body">
         <div class="form-container">
-            <form action="" method="get" class="form send-wishes-modal__form">
+            <form action="" method="post" id="sendWishesModalForm" class="form send-wishes-modal__form">
                 <div class="form-group">
                     <div class="form-item send-wishes-modal__form-item">
                         <label class="label send-wishes-modal__label label--required" for="name">Ваше имя и фамилия</label>
-                        <input type="text" class="send-wishes-modal__input input" id="nameWishes">
+                        <input type="text" class="send-wishes-modal__input input" data-type="text" id="nameWishes">
                     </div>
                     <div class="form-item send-wishes-modal__form-item">
                         <label class="label send-wishes-modal__label label--required" for="lastName">Текст пожелания</label>
@@ -750,7 +757,7 @@
 
 <!---->
 <script src="libs/slick/slick.min.js"></script>
-<script src="scripts/main.js"></script>
+<script src="scripts/common.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGNCIsl2nCw-Xfac-MVjnYbeMkR1yxSsU&callback=initMap"
         async defer></script>
 <script>

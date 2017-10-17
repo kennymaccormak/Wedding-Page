@@ -220,6 +220,10 @@ p {
     transform: rotate(180deg);
 }
 
+.validation-error {
+    border-color: #f05f75;
+}
+
 .buttons {
 }
 
@@ -519,7 +523,7 @@ p {
     top: 83px;
 }
 
-.mobile-header__nav--active {
+.nav--active {
     display: block;
 }
 
