@@ -1696,6 +1696,49 @@ p {
 
 /*end*/
 
+/*content => gifts*/
+
+.gifts-block {}
+
+.gifts__text {
+    color: #414141;
+}
+
+.gifts__text.sub-title {
+    color: #606060;
+    font-weight: 300;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.gifts {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.gifts:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.gift {
+    float: left;
+    width: 22%;
+    margin-right: 4%;
+}
+
+.gift:nth-child(4) {
+    margin-right: 0;
+}
+
+.gift img {
+    width: 100%;
+    height: auto;
+}
+
+/*end*/
+
 /*content => thanks-block*/
 
 .thanks-block {

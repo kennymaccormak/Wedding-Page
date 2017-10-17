@@ -203,6 +203,16 @@
     .history-gallery__item {
         height: auto !important;
     }
+
+    .wishes,
+    .gifts-block {
+        background: #fff;
+    }
+
+    .gifts-block .container {
+        width: 100%;
+        max-width: none;
+    }
 }
 
 @media screen and (max-width: 830px) {
@@ -487,7 +497,7 @@
     }
 
     .wishes {
-        background: #f6f6f6;
+        background: #fff;
     }
 
     .wishes-buttons {
@@ -506,6 +516,14 @@
     .form-group.buttons {
         margin-bottom: 0;
     }
+
+    .gift:nth-child(4),
+    .gift {
+        float: none;
+        width: 30%;
+        margin: 5px auto;
+    }
+
 }
 
 @media screen and (max-width: 470px) {
