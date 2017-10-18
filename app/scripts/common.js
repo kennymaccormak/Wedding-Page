@@ -19,10 +19,10 @@ function formValidation(formId) {
         }
     ;
 
-    if(formComponents.inputs.length !== 0) {
+    if (formComponents.inputs.length !== 0) {
         formComponents.inputs.each(function () {
-            if($(this).data("type") === "text" || $(this).data("type") === "phone") {
-                if($(this).val() === "") {
+            if ($(this).data("type") === "text" || $(this).data("type") === "phone") {
+                if ($(this).val() === "") {
                     status.push(false);
                     $(this).addClass("validation-error");
                 } else {
@@ -30,7 +30,7 @@ function formValidation(formId) {
                     $(this).removeClass("validation-error");
                 }
             } else if ($(this).data("type") === "select") {
-                if($(this).val() === "") {
+                if ($(this).val() === "") {
                     status.push(false);
                     $(this).closest(".select").addClass("validation-error");
                 } else {
@@ -41,9 +41,9 @@ function formValidation(formId) {
         });
     }
 
-    if(formComponents.textarea.length !== 0) {
+    if (formComponents.textarea.length !== 0) {
         formComponents.textarea.each(function () {
-            if($(this).val() === "") {
+            if ($(this).val() === "") {
                 status.push(false);
                 $(this).addClass("validation-error");
             } else {
@@ -60,6 +60,60 @@ function formValidation(formId) {
     });
 
     return response;
+}
+
+function inicializeModalGallery() {
+    var $this = $(this),
+        modal = $("#photoGalleryModal"),
+        modalCloseBtn = modal.find(".button--close-modal"),
+        modalTitle = modal.find(".modal-title"),
+        chosenPhoto = modal.find(".chosen-photo__img"),
+        chosenGroup = modal.find(".chosen-group__items"),
+        chosenGroupItem = null,
+        currentGalleryItems = $(".photo-gallery__group--active").find(".photo-gallery__img"),
+        count = 0,
+        i = 0
+    ;
+
+    modalTitle.text($(".photo-gallery__title--active").text());
+    chosenPhoto.attr("src", $this.attr("src"));
+
+    currentGalleryItems.each(function () {
+        chosenGroup.append($("<div>", {
+            "class": "chosen-group__item",
+            html: $("<img>", {
+                "class": "chosen-group__img",
+                "src": $(this).attr("src")
+            })
+        }));
+
+        if ($(this).attr("src") === $this.attr("src")) {
+            count = currentGalleryItems.index($(this))
+        }
+    });
+
+    function positioningGroupPhotos() {
+        var left = 0;
+
+        if (count !== 0) {
+            left = count * (-220);
+        }
+
+        chosenGroup.find(".chosen-group__item").each(function () {
+            $(this).css({"left": left});
+            if ($(this).css("left") === "0px") {
+                $(this).addClass("chosen-group__item--active")
+            }
+            left += 220;
+        })
+
+    }
+
+    positioningGroupPhotos();
+    modal.show();
+    modalCloseBtn.click(function () {
+        $(".chosen-group__item").remove();
+    });
 }
 
 function MobileMenu(selector) {
@@ -275,6 +329,51 @@ function Guest(selector) {
     g.showMoreBtn.click(g.showMoreImgs);
 }
 
+function PhotoGallery(selector) {
+    var pg = $(this);
+
+    pg.gallery = $(selector);
+    pg.titles = pg.gallery.find(".photo-gallery__title");
+    pg.photoGalleryGroup = pg.gallery.find(".photo-gallery__group");
+    pg.imgs = pg.gallery.find(".photo-gallery__img");
+
+    pg.changeGalleryGroup = function () {
+        var $this = $(this),
+            dataVal = $this.data("galleryGroup")
+        ;
+
+        pg.titles.each(function () {
+            $(this).removeClass("photo-gallery__title--active")
+        });
+
+        $this.addClass("photo-gallery__title--active");
+
+        pg.photoGalleryGroup.each(function () {
+            if ($(this).data("galleryGroup") === dataVal) {
+                $(this).css({"display": "block"});
+                $(this).addClass("photo-gallery__group--active");
+            } else {
+                $(this).css({"display": "none"});
+                $(this).removeClass("photo-gallery__group--active");
+            }
+        });
+    };
+
+    pg.titles.click(pg.changeGalleryGroup);
+    pg.imgs.click(inicializeModalGallery);
+}
+
+function ModalGallery(selector) {
+    var mg = $(this);
+
+    mg.gallery = $(selector);
+    mg.prevBtn = mg.gallery.find(".button-control--prev");
+    mg.nextBtn = mg.gallery.find(".button-control--next");
+    mg.currentImg = mg.gallery.find(".chosen-photo__img");
+    mg.allImg = mg.gallery.find(".chosen-group__item");
+
+}
+
 $(function () {
     var mobMenu = new MobileMenu(".mobile-header"),
         deskMenu = new DesktopMenu(".header"),
@@ -283,9 +382,12 @@ $(function () {
         placesSlider = new PlacesSlider(".time-and-place"),
         select = new Select("#select1"),
         guest = new Guest(".guests-block"),
+        photoGallery = new PhotoGallery(".photo-gallery"),
+        modalGallery = new ModalGallery(".modal-gallery"),
         form1 = new Form("#interviewForm"),
         form2 = new Form("#sendWishesModalForm"),
-        modal = new Modal(".modal")
+        modal1 = new Modal("#sendWishesModal"),
+        modal2 = new Modal("#photoGalleryModal")
     ;
 
 

@@ -725,6 +725,83 @@
         </div>
     </div>
 </div>
+<div class="content photo-gallery-block slide slide-photo-gallery">
+    <h2 class="photo-gallery-block__text main-title">
+        галерея
+    </h2>
+    <div class="photo-gallery container">
+        <div class="photo-gallery__titles">
+            <div class="photo-gallery__title photo-gallery__title--active" data-gallery-group="0">Все</div>
+            <div class="photo-gallery__title" data-gallery-group="1">Венчание</div>
+            <div class="photo-gallery__title" data-gallery-group="2">Регистрация</div>
+            <div class="photo-gallery__title" data-gallery-group="3">Ресторан</div>
+            <div class="photo-gallery__title" data-gallery-group="4">Танцы</div>
+            <div class="photo-gallery__title" data-gallery-group="5">Видео</div>
+        </div>
+        <div class="photo-gallery__groups">
+            <div class="photo-gallery__group photo-gallery__group--active" data-gallery-group="0">
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal1.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal2.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal3.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal4.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal5.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal6.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+            </div>
+            <div class="photo-gallery__group" data-gallery-group="1">
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal1.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal1.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal3.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal4.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal5.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal6.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+            </div>
+            <div class="photo-gallery__group" data-gallery-group="2">
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal1.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal1.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal1.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal4.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal5.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+                <div class="photo-gallery__item">
+                    <img src="img/photo-gallery/gal6.jpg" alt="gallery" class="photo-gallery__img">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="content thanks-block slide slide-thanks-block">
     <h2 class="thanks-block__text main-title">Благодарим!</h2>
@@ -779,7 +856,7 @@
     </div>
 </footer>
 
-<div class="modal send-wishes-modal" id="sendWishesModal">
+<div class="modal send-wishes-modal modal--small" id="sendWishesModal">
     <div class="modal-header">
         <div class="modal-title">Ваше пожелание</div>
         <button type="button" class="button modal-header__button button--close-modal"></button>
@@ -805,6 +882,26 @@
                     <button type="submit" class="send-wishes-modal__button button button--positive">Отправить</button>
                 </div>
             </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal photo-gallery-modal modal--large" id="photoGalleryModal">
+    <div class="modal-header">
+        <div class="modal-title">Все</div>
+        <button type="button" class="button modal-header__button button--close-modal"></button>
+    </div>
+    <div class="modal-body modal-gallery">
+        <div class="chosen-photo">
+            <button class="chosen-photo__button button button-control button-control--prev"></button>
+            <img class="chosen-photo__img" src="img/photo-gallery/gal1.jpg" alt="current-photo">
+            <button class="chosen-photo__button button button-control button-control--next"></button>
+        </div>
+        <div class="chosen-group">
+            <button class="chosen-group__button button button-control button-control--prev"></button>
+            <div class="chosen-group__items">
+            </div>
+            <button class="chosen-group__button button button-control button-control--next"></button>
         </div>
     </div>
 </div>

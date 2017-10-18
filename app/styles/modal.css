@@ -2,20 +2,35 @@
     background: #fffcf4;
     border: 10px solid #f05f75;
     display: none;
-    margin-left: -300px;
-    margin-top: -265px;
     padding: 40px 70px;
     position: fixed;
-    width: 440px;
-    /*height: 430px;*/
     top: 50%;
     left: 50%;
+}
+
+.modal--small {
+    margin-left: -300px;
+    margin-top: -265px;
+    width: 440px;
+}
+
+.modal--large {
+    margin-left: -600px;
+    margin-top: -450px;
+    width: 1040px;
 }
 
 .modal-header {
 }
 
 .modal-title {
+    color: #414141;
+    font-family: "Cormorant", sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .modal-header__button {
@@ -34,7 +49,7 @@
 }
 
 @media screen and (max-width: 660px) {
-    .modal {
+    .modal--small {
         width: 350px;
         margin-left: -255px;
     }

@@ -252,6 +252,63 @@ p {
     padding: 0 25px;
 }
 
+.button-control {
+    background: rgba(246, 246, 246, .95);
+    border-radius: 100%;
+    position: relative;
+    width: 26px;
+    height: 26px;
+}
+
+.button-control:before,
+.button-control:after {
+    content: '';
+    background: #f05f75;
+    display: block;
+    position: relative;
+    width: 10px;
+    height: 1px;
+    left: 0;
+}
+
+.button-control--prev:before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: -3px;
+}
+
+.button-control--prev:after {
+    -webkit-transform: rotate(228deg);
+    -moz-transform: rotate(228deg);
+    -ms-transform: rotate(228deg);
+    -o-transform: rotate(228deg);
+    transform: rotate(228deg);
+    top: 3px;
+}
+
+.button-control--next:before {
+    -webkit-transform: rotate(228deg);
+    -moz-transform: rotate(228deg);
+    -ms-transform: rotate(228deg);
+    -o-transform: rotate(228deg);
+    transform: rotate(228deg);
+    top: -3px;
+    left: 5px;
+}
+
+.button-control--next:after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 3px;
+    left: 5px;
+}
+
 .border {
 }
 
@@ -1151,11 +1208,11 @@ p {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-transition: all .4s;
-    -moz-transition: all .4s;
-    -ms-transition: all .4s;
-    -o-transition: all .4s;
-    transition: all .4s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
 }
 
 .gallery-item-layout__description {
@@ -1735,6 +1792,155 @@ p {
 .gift img {
     width: 100%;
     height: auto;
+}
+
+/*end*/
+
+/*content => photo-gallery*/
+
+.photo-gallery-block {
+    background-color: #f6f6f6;
+}
+
+.photo-gallery-block__text {
+    color: #414141;
+}
+
+.photo-gallery__titles {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.photo-gallery__title {
+    color: #747474;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 10px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.photo-gallery__title--active {
+    background: #f05f75;
+    color: #ffffff;
+}
+
+.photo-gallery__groups {
+    margin-top: 48px;
+}
+
+.photo-gallery__group {
+    display: none;
+}
+
+.photo-gallery__group:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.photo-gallery__group--active {
+    display: block;
+}
+
+.photo-gallery__item {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+}
+
+.photo-gallery__item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.photo-gallery__img {
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+
+/*end*/
+
+/*content => photo-gallery-modal*/
+
+.chosen-photo {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.chosen-photo__img {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
+}
+
+.chosen-group__button,
+.chosen-photo__button {
+    position: absolute;
+}
+
+.chosen-photo__button.button-control--prev {
+    top: 50%;
+    left: 100px;
+    margin-top: -13px;
+}
+.chosen-photo__button.button-control--next {
+    top: 50%;
+    right: 100px;
+    margin-top: -13px;
+}
+
+.chosen-group__button.button-control--prev {
+    top: 50%;
+    left: -60px;
+    margin-top: -13px;
+}
+
+.chosen-group__button.button-control--next {
+    top: 50%;
+    right: -60px;
+    margin-top: -13px;
+}
+
+.chosen-group {
+    margin: 40px auto 0;
+    position: relative;
+    width: 70%;
+}
+
+.chosen-group__items {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 136px;
+}
+
+.chosen-group__item {
+    border: 1px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 133px;
+}
+
+.chosen-group__img {
+    cursor: pointer;
+    width: 200px;
+    height: 133px;
+}
+
+.chosen-group__item--active {
+    border-color: #f05f75;
 }
 
 /*end*/
