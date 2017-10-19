@@ -63,20 +63,17 @@ function formValidation(formId) {
 }
 
 function inicializeModalGallery() {
-    var $this = $(this),
+    var img = $(this),
         modal = $("#photoGalleryModal"),
         modalCloseBtn = modal.find(".button--close-modal"),
         modalTitle = modal.find(".modal-title"),
         chosenPhoto = modal.find(".chosen-photo__img"),
         chosenGroup = modal.find(".chosen-group__items"),
         chosenGroupItem = null,
-        currentGalleryItems = $(".photo-gallery__group--active").find(".photo-gallery__img"),
-        count = 0,
-        i = 0
+        currentGalleryItems = $(".photo-gallery__group--active").find(".photo-gallery__img")
     ;
 
     modalTitle.text($(".photo-gallery__title--active").text());
-    chosenPhoto.attr("src", $this.attr("src"));
 
     currentGalleryItems.each(function () {
         chosenGroup.append($("<div>", {
@@ -85,14 +82,27 @@ function inicializeModalGallery() {
                 "class": "chosen-group__img",
                 "src": $(this).attr("src")
             })
-        }));
-
-        if ($(this).attr("src") === $this.attr("src")) {
-            count = currentGalleryItems.index($(this))
-        }
+        }).click(setPhoto));
     });
 
-    function positioningGroupPhotos() {
+    function setChosenPhoto(param) {
+        chosenPhoto.attr("src", param.attr("src"));
+    }
+
+    function getCount(param) {
+        var count = 0;
+        currentGalleryItems.each(function () {
+            if ($(this).attr("src") === param.attr("src")) {
+                count = currentGalleryItems.index($(this));
+                if (count > 3) {
+                    count = 3
+                }
+            }
+        });
+        return count;
+    }
+
+    function positioningGroupPhotos(count, isAnimated) {
         var left = 0;
 
         if (count !== 0) {
@@ -100,8 +110,13 @@ function inicializeModalGallery() {
         }
 
         chosenGroup.find(".chosen-group__item").each(function () {
-            $(this).css({"left": left});
-            if ($(this).css("left") === "0px") {
+            if (isAnimated) {
+                $(this).animate({"left": left}, 500);
+            } else {
+                $(this).css({"left": left});
+            }
+
+            if ($(this).find("img").attr("src") === chosenPhoto.attr("src")) {
                 $(this).addClass("chosen-group__item--active")
             }
             left += 220;
@@ -109,8 +124,26 @@ function inicializeModalGallery() {
 
     }
 
-    positioningGroupPhotos();
+    function setPhoto() {
+        var $this = $(this),
+            img = $this.find("img")
+        ;
+        setChosenPhoto(img);
+        chosenGroup.find(".chosen-group__item").each(function () {
+            $(this).removeClass("chosen-group__item--active");
+        });
+        $(this).addClass("chosen-group__item--active");
+
+        positioningGroupPhotos(getCount(img), true);
+    }
+
+    setChosenPhoto(img);
+    positioningGroupPhotos(getCount(img), false);
+
     modal.show();
+
+    var modalGallery = new ModalGallery(".modal-gallery");
+
     modalCloseBtn.click(function () {
         $(".chosen-group__item").remove();
     });
@@ -365,6 +398,9 @@ function PhotoGallery(selector) {
 
 function ModalGallery(selector) {
     var mg = $(this);
+    var photoIndex = 0,
+        count = 0
+    ;
 
     mg.gallery = $(selector);
     mg.prevBtn = mg.gallery.find(".button-control--prev");
@@ -372,6 +408,15 @@ function ModalGallery(selector) {
     mg.currentImg = mg.gallery.find(".chosen-photo__img");
     mg.allImg = mg.gallery.find(".chosen-group__item");
 
+    mg.setPrevPhoto = function () {
+        var btn = $(this)
+        ;
+
+
+
+    };
+
+    mg.prevBtn.click(mg.setPrevPhoto);
 }
 
 $(function () {
@@ -383,7 +428,6 @@ $(function () {
         select = new Select("#select1"),
         guest = new Guest(".guests-block"),
         photoGallery = new PhotoGallery(".photo-gallery"),
-        modalGallery = new ModalGallery(".modal-gallery"),
         form1 = new Form("#interviewForm"),
         form2 = new Form("#sendWishesModalForm"),
         modal1 = new Modal("#sendWishesModal"),
