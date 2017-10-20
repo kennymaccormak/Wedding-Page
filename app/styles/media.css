@@ -229,6 +229,14 @@
         width: 100%;
         margin-right: 0;
     }
+
+    .photo-gallery-modal {
+        display: none !important;
+    }
+
+    .photo-gallery__img {
+        cursor: default;
+    }
 }
 @media screen and (max-width: 920px) {
     .modal--large {

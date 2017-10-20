@@ -514,6 +514,18 @@ $(function () {
         $("#sendWishesModal").show();
     });
 
+    $(window).resize(function () {
+        if ($(window).width() < 1000) {
+            $("#photoGalleryModal").hide();
+            $(".chosen-group__item").remove();
+        }
+    });
+
+    if ($(window).width() < 1000) {
+        $("#photoGalleryModal").hide();
+        $(".chosen-group__item").remove();
+    }
+
     /*inicialize slick slider*/
     $('.wishes-slider').slick({
         dots: true
