@@ -1883,20 +1883,8 @@ p {
     height: auto;
 }
 
-.chosen-group__button,
-.chosen-photo__button {
+.chosen-group__button{
     position: absolute;
-}
-
-.chosen-photo__button.button-control--prev {
-    top: 50%;
-    left: 100px;
-    margin-top: -13px;
-}
-.chosen-photo__button.button-control--next {
-    top: 50%;
-    right: 100px;
-    margin-top: -13px;
 }
 
 .chosen-group__button.button-control--prev {

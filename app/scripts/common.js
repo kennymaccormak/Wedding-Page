@@ -94,8 +94,8 @@ function inicializeModalGallery() {
         currentGalleryItems.each(function () {
             if ($(this).attr("src") === param.attr("src")) {
                 count = currentGalleryItems.index($(this));
-                if (count > 3) {
-                    count = 3
+                if (count > currentGalleryItems.length - 3) {
+                    count = currentGalleryItems.length - 3
                 }
             }
         });
@@ -141,8 +141,6 @@ function inicializeModalGallery() {
     positioningGroupPhotos(getCount(img), false);
 
     modal.show();
-
-    var modalGallery = new ModalGallery(".modal-gallery");
 
     modalCloseBtn.click(function () {
         $(".chosen-group__item").remove();
@@ -394,6 +392,8 @@ function PhotoGallery(selector) {
 
     pg.titles.click(pg.changeGalleryGroup);
     pg.imgs.click(inicializeModalGallery);
+
+    var modalGallery = new ModalGallery(".modal-gallery");
 }
 
 function ModalGallery(selector) {
@@ -403,20 +403,95 @@ function ModalGallery(selector) {
     ;
 
     mg.gallery = $(selector);
-    mg.prevBtn = mg.gallery.find(".button-control--prev");
-    mg.nextBtn = mg.gallery.find(".button-control--next");
+    mg.prevPhotoBtn = mg.gallery.find(".chosen-group .button-control--prev");
+    mg.nextPhotoBtn = mg.gallery.find(".chosen-group .button-control--next");
     mg.currentImg = mg.gallery.find(".chosen-photo__img");
-    mg.allImg = mg.gallery.find(".chosen-group__item");
+    mg.allItemImg = mg.gallery.find(".chosen-group__item");
+    mg.imgArray = mg.gallery.find(".chosen-group__img");
 
-    mg.setPrevPhoto = function () {
-        var btn = $(this)
+    mg.positioningImgInGroup = function (action, index) {
+        // true = move left
+        // false = move right
+        var left = 0,
+            allItemImg = $(".chosen-group__item"),
+            allItemImgLength = allItemImg.length,
+            $img = $(allItemImg[index])
         ;
 
+        if (allItemImg.is(":animated")) {
+            return
+        }
 
-
+        left = parseInt($img.css("left"));
+        var firstElementLeft = parseInt(allItemImg.first().position().left);
+        var lastElementLeft = parseInt(allItemImg.last().position().left);
+        console.log("index: ", index);
+        allItemImg.each(function () {
+            if (action) {
+                if (lastElementLeft === 440 && index === 0) {
+                    left = parseInt($(this).position().left) - ((allItemImgLength - 3) * -220);
+                    $(this).animate({"left": left}, 500);
+                } else if (lastElementLeft !== 440) {
+                    left = $(this).position().left - 220;
+                    $(this).animate({"left": left}, 500);
+                }
+            } else {
+                if (firstElementLeft === 0 && index > 2) {
+                    left = parseInt($(this).position().left) - ((allItemImgLength - 3) * 220);
+                    $(this).animate({"left": left}, 500);
+                } else if (firstElementLeft !== 0) {
+                    left = $(this).position().left + 220;
+                    $(this).animate({"left": left}, 500);
+                }
+            }
+        });
     };
 
-    mg.prevBtn.click(mg.setPrevPhoto);
+    mg.setNextPhoto = function () {
+        var btn = $(this),
+            allItemImg = $(".chosen-group__item"),
+            allItemImgLength = allItemImg.length,
+            currentImgInGroup = $(".chosen-group__item--active"),
+            index = allItemImg.index(currentImgInGroup),
+            nextImgInGroup = (index === (allItemImgLength-1))
+                ? allItemImg.first()
+                : currentImgInGroup.next(),
+            left = 0
+        ;
+        if (allItemImg.is(":animated")) {
+            return
+        }
+        mg.currentImg.attr("src", nextImgInGroup.find("img").attr("src"));
+
+        currentImgInGroup.removeClass("chosen-group__item--active");
+        nextImgInGroup.addClass("chosen-group__item--active");
+
+        mg.positioningImgInGroup(true, allItemImg.index(nextImgInGroup));
+    };
+
+    mg.setPrevPhoto = function () {
+        var btn = $(this),
+            allItemImg = $(".chosen-group__item"),
+            currentImgInGroup = $(".chosen-group__item--active"),
+            index = allItemImg.index(currentImgInGroup),
+            prevImgInGroup = (index === 0)
+                ? allItemImg.last()
+                : currentImgInGroup.prev(),
+            left = 0
+        ;
+        if (allItemImg.is(":animated")) {
+            return
+        }
+        mg.currentImg.attr("src", prevImgInGroup.find("img").attr("src"));
+
+        currentImgInGroup.removeClass("chosen-group__item--active");
+        prevImgInGroup.addClass("chosen-group__item--active");
+
+        mg.positioningImgInGroup(false, allItemImg.index(prevImgInGroup));
+    };
+
+    mg.prevPhotoBtn.click(mg.setPrevPhoto);
+    mg.nextPhotoBtn.click(mg.setNextPhoto);
 }
 
 $(function () {
