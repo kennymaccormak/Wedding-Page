@@ -156,7 +156,7 @@ p {
 
 .select__button:after {
     content: '';
-    background: url("../img/icon_drpdwn.png") no-repeat 0 0;
+    background: url("../../../img/icon_drpdwn.png") no-repeat 0 0;
     display: block;
     margin-top: -6px;
     position: absolute;
@@ -330,7 +330,7 @@ p {
 
 .icn-heart:after {
     content: "";
-    background: url("../img/icon_heart.png") no-repeat 0 0;
+    background: url("../../../img/icon_heart.png") no-repeat 0 0;
     display: block;
     position: absolute;
     width: 33px;
@@ -341,7 +341,7 @@ p {
 }
 
 .icn-flower {
-    background: url("../img/icon_flower.png") no-repeat 0 0;
+    background: url("../../../img/icon_flower.png") no-repeat 0 0;
     display: inline-block;
     position: relative;
     width: 49px;
@@ -376,7 +376,7 @@ p {
 
 .icn-birds:after {
     content: "";
-    background: url("../img/icon_birds.png") no-repeat 0 0;
+    background: url("../../../img/icon_birds.png") no-repeat 0 0;
     display: block;
     position: absolute;
     width: 86px;
@@ -395,7 +395,7 @@ p {
 
 .icn-calendar:after {
     content: '';
-    background: url("../img/icon_calendar.png") no-repeat 0 0;
+    background: url("../../../img/icon_calendar.png") no-repeat 0 0;
     background-size: contain;
     display: block;
     position: absolute;
@@ -414,7 +414,7 @@ p {
 
 .icn-clock:after {
     content: '';
-    background: url("../img/icon_clock.png") no-repeat 0 0;
+    background: url("../../../img/icon_clock.png") no-repeat 0 0;
     background-size: contain;
     display: block;
     position: absolute;
@@ -433,7 +433,7 @@ p {
 
 .icn-address:after {
     content: '';
-    background: url("../img/icon_place.png") no-repeat 0 0;
+    background: url("../../../img/icon_place.png") no-repeat 0 0;
     background-size: contain;
     display: block;
     position: absolute;
@@ -713,7 +713,7 @@ p {
 /*content => title-block*/
 
 .title-block {
-    background: url("../img/slider_1.jpg") no-repeat center center;
+    background: url("../../../img/slider_1.jpg") no-repeat center center;
     background-size: cover;
     text-align: center;
     padding-top: 240px;
@@ -992,7 +992,7 @@ p {
 }
 
 .history-head {
-    background: url("../img/bg_history.jpg") no-repeat center center;
+    background: url("../../../img/bg_history.jpg") no-repeat center center;
     background-size: cover;
     padding-top: 123px;
     height: 331px;
@@ -1071,7 +1071,7 @@ p {
 }
 
 .event-date {
-    background: url("../img/bg_event-date.png") no-repeat center center;
+    background: url("../../../img/bg_event-date.png") no-repeat center center;
     background-size: contain;
     display: block;
     margin-left: 1px;
@@ -1256,7 +1256,7 @@ p {
 /*content => time-and-place*/
 
 .time-and-place {
-    background: url("../img/bg_places.jpg") no-repeat center;
+    background: url("../../../img/bg_places.jpg") no-repeat center;
     background-size: cover;
     border-bottom: 1px solid #fff;
     width: 100%;
@@ -1366,7 +1366,7 @@ p {
 /*content => timetable*/
 
 .timetable {
-    background: url("../img/bg_timetable.jpg") no-repeat center;
+    background: url("../../../img/bg_timetable.jpg") no-repeat center;
     -webkit-background-size: cover;
     background-size: cover;
     min-height: 736px;
@@ -1442,7 +1442,7 @@ p {
 /*content => timetable*/
 
 .interview {
-    background: url("../img/bg_interview.jpg") no-repeat center;
+    background: url("../../../img/bg_interview.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -1626,7 +1626,7 @@ p {
 .wishes-slider:before {
     content: '';
     display: block;
-    background: url("../img/icon_birds_inverse.png") no-repeat 0 0;
+    background: url("../../../img/icon_birds_inverse.png") no-repeat 0 0;
     position: absolute;
     width: 86px;
     height: 53px;
@@ -1936,7 +1936,7 @@ p {
 /*content => thanks-block*/
 
 .thanks-block {
-    background: url("../img/bg_thanks.jpg") no-repeat center;
+    background: url("../../../img/bg_thanks.jpg") no-repeat center;
     background-size: cover;
     width: 100%;
 }
