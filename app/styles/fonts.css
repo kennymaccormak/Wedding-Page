@@ -7,3 +7,10 @@
 @import url('https://fonts.googleapis.com/css?family=Bad+Script&subset=cyrillic');
 
 @import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700,900');
+
+@font-face {
+    font-family: "Andantinoscript";
+    src: url("../fonts/Andantinoscript.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
