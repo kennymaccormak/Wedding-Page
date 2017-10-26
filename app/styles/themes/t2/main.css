@@ -430,4 +430,77 @@ a {
 
 }
 
+
+.pie{                               /*todo: refactor, right style*/
+    background-color:#DFE8ED;
+    width:160px;
+    height:160px;
+    -moz-border-radius:100%;
+    -webkit-border-radius:100%;
+    border-radius:100%;
+    position:relative;
+}
+.clip1 {
+    position:absolute;
+    top:0;
+    left:0;
+    width:160px;
+    height:160px;
+    clip:rect(0px, 160px, 160px, 80px);
+}
+.slice1 {
+    position:absolute;
+    width:160px;
+    height:160px;
+    clip:rect(0px, 80px, 160px, 0px);
+    -moz-border-radius:100%;
+    -webkit-border-radius:100%;
+    border-radius:100%;
+    background-color:#30BAE7;
+    border-color:#30BAE7;
+    -moz-transform:rotate(0);
+    -webkit-transform:rotate(0);
+    -o-transform:rotate(0);
+    transform:rotate(0);
+}
+.clip2 {
+    position:absolute;
+    top:0;
+    left:0;
+    width:160px;
+    height:160px;
+    clip:rect(0, 80px, 160px, 0px);
+}
+.slice2 {
+    position:absolute;
+    width:160px;
+    height:160px;
+    clip:rect(0px, 160px, 160px, 80px);
+    -moz-border-radius:100%;
+    -webkit-border-radius:100%;
+    border-radius:100%;
+    background-color:#30BAE7;
+    border-color:#30BAE7;
+    -moz-transform:rotate(0);
+    -webkit-transform:rotate(0);
+    -o-transform:rotate(0);
+    transform:rotate(0);
+}
+.status {
+    position:absolute;
+    top:13px;
+    left: 13px;
+    width: 134px;
+    height: 93px;
+    padding-top: 41px;
+    border-radius: 100%;
+    font-family: 'Titillium Web', sans-serif;
+    font-size:50px;
+    text-align:center;
+    color: #3C4761;
+    line-height:50px;
+    background: #fff;
+}
+
+
 /*end date timer block*/
