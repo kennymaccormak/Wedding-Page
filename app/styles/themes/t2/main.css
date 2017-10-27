@@ -423,84 +423,134 @@ a {
 }
 
 .date-timer-container {
-
+    padding-bottom: 90px;
 }
 
 .date-timer {
-
+    margin: 30px auto 0;
+    width: 340px;
 }
 
+.date-timer:after {
+    content: '';
+    clear: both;
+    display: block;
+}
 
-.pie{                               /*todo: refactor, right stylez*/
-    background-color:#DFE8ED;
-    width:160px;
-    height:160px;
-    -moz-border-radius:100%;
-    -webkit-border-radius:100%;
-    border-radius:100%;
-    position:relative;
-}
-.clip1 {
-    position:absolute;
-    top:0;
-    left:0;
-    width:160px;
-    height:160px;
-    clip:rect(0px, 160px, 160px, 80px);
-}
-.slice1 {
-    position:absolute;
-    width:160px;
-    height:160px;
-    clip:rect(0px, 80px, 160px, 0px);
-    -moz-border-radius:100%;
-    -webkit-border-radius:100%;
-    border-radius:100%;
-    background-color:#30BAE7;
-    border-color:#30BAE7;
-    -moz-transform:rotate(0);
-    -webkit-transform:rotate(0);
-    -o-transform:rotate(0);
-    transform:rotate(0);
-}
-.clip2 {
-    position:absolute;
-    top:0;
-    left:0;
-    width:160px;
-    height:160px;
-    clip:rect(0, 80px, 160px, 0px);
-}
-.slice2 {
-    position:absolute;
-    width:160px;
-    height:160px;
-    clip:rect(0px, 160px, 160px, 80px);
-    -moz-border-radius:100%;
-    -webkit-border-radius:100%;
-    border-radius:100%;
-    background-color:#30BAE7;
-    border-color:#30BAE7;
-    -moz-transform:rotate(0);
-    -webkit-transform:rotate(0);
-    -o-transform:rotate(0);
-    transform:rotate(0);
-}
-.status {
-    position:absolute;
-    top:13px;
-    left: 13px;
-    width: 134px;
-    height: 93px;
-    padding-top: 41px;
+.date-timer__item {
+    background-color: #DFE8ED;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
     border-radius: 100%;
-    font-family: 'Titillium Web', sans-serif;
-    font-size:50px;
-    text-align:center;
-    color: #3C4761;
-    line-height:50px;
-    background: #fff;
+    float: left;
+    position: relative;
+    width: 100px;
+    height: 100px;
 }
 
+.date-timer-item--day {
+
+}
+
+.date-timer-item--hours {
+    margin: 0 20px;
+}
+
+.date-timer-item--minutes {
+
+}
+
+.clip1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    clip: rect(0px, 100px, 100px, 50px);
+}
+
+.slice1 {
+    background-color: #cf3d63;
+    border-color: #cf3d63;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    clip: rect(0px, 100px, 100px, 50px);
+    -moz-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+}
+
+.clip2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    clip: rect(0, 50px, 100px, 0px);
+}
+
+.slice2 {
+    background-color: #cf3d63;
+    border-color: #cf3d63;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    clip: rect(0px, 50px, 100px, 0px);
+    -moz-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+}
+
+.date-timer__data {
+    background: #fff;
+    border-radius: 100%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+.date-timer__value {
+    color: #dd9ba9;
+    font-family: Roboto, sans-serif;
+    font-size: 39px;
+    font-weight: 400;
+    line-height: 42px;
+    text-align: center;
+    position: absolute;
+    width: 42px;
+    top: 6px;
+    left: 18px;
+}
+
+.date-timer__text {
+    color: #dd9ba9;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    position: absolute;
+    top: 44px;
+    left: 16px;
+}
+
+.date-timer-item--hours .date-timer__text {
+    left: 11px;
+}
+
+.date-timer-item--minutes .date-timer__text {
+    left: 11px;
+
+}
 
 /*end date timer block*/

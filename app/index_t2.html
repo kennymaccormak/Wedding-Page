@@ -99,32 +99,42 @@
     <div class="date-timer-container">
         <h2 class="block__text main-title">Мы женимся через</h2>
         <div class="date-timer">
-            <div class="pie pie-1">
+            <input type="hidden" id="finalDate" value="2017/11/29">
+            <div class="date-timer__item date-timer-item--day">
                 <div class="clip1">
                     <div class="slice1"></div>
                 </div>
                 <div class="clip2">
                     <div class="slice2"></div>
                 </div>
-                <div class="status">0</div>
-            </div>
-            <div class="pie pie-2">
-                <div class="clip1">
-                    <div class="slice1"></div>                  <!--todo: refactor, new classes-->
+                <div class="date-timer__data">
+                    <div class="date-timer__value"></div>
+                    <div class="date-timer__text">Дней</div>
                 </div>
-                <div class="clip2">
-                    <div class="slice2"></div>
-                </div>
-                <div class="status"></div>
             </div>
-            <div class="pie pie-3">
+            <div class="date-timer__item date-timer-item--hours">
                 <div class="clip1">
                     <div class="slice1"></div>
                 </div>
                 <div class="clip2">
                     <div class="slice2"></div>
                 </div>
-                <div class="status"></div>
+                <div class="date-timer__data">
+                    <div class="date-timer__value"></div>
+                    <div class="date-timer__text">Часов</div>
+                </div>
+            </div>
+            <div class="date-timer__item date-timer-item--minutes">
+                <div class="clip1">
+                    <div class="slice1"></div>
+                </div>
+                <div class="clip2">
+                    <div class="slice2"></div>
+                </div>
+                <div class="date-timer__data">
+                    <div class="date-timer__value"></div>
+                    <div class="date-timer__text">Минут</div>
+                </div>
             </div>
         </div>
     </div>
