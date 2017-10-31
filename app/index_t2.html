@@ -352,8 +352,117 @@
         </div>
     </div>
 </div>
+<div class="empty-block empty-block--white"></div>
+<div class="time-and-place slide slide-time-and-place">
+    <div class="container">
+        <div class="time-and-place__routes routes">
+            <div class="time-and-place__route route">
+                <button type="button" class="route__button button route-button--bus">
+                    <i class="i-plus-in-circle"></i>
+                </button>
+                <div class="route__info">Поездом - центральній жд вокзал Киева, дальше можно ехать на метро до станции
+                    Демеевская или вызвать такси
+                </div>
+            </div>
+            <div class="time-and-place__route route">
+                <button type="button" class="route__button button route-button--plan">
+                    <i class="i-plus-in-circle"></i>
+                </button>
+                <div class="route__info">Поездом - центральній жд вокзал Киева, дальше можно ехать на метро до станции
+                    Демеевская или вызвать такси
+                </div>
+            </div>
+            <div class="time-and-place__route route">
+                <button type="button" class="route__button button route-button-train">
+                    <i class="i-plus-in-circle"></i>
+                </button>
+                <div class="route__info">Поездом - центральній жд вокзал Киева, дальше можно ехать на метро до станции
+                    Демеевская или вызвать такси
+                </div>
+            </div>
+            <div class="time-and-place__bus route">
+                <button type="button" class="route__button button route-button--car">
+                    <i class="i-plus-in-circle"></i>
+                </button>
+                <div class="route__info">Поездом - центральній жд вокзал Киева, дальше можно ехать на метро до станции
+                    Демеевская или вызвать такси
+                </div>
+            </div>
+            <div class="routes__title">Как добраться</div>
+        </div>
+        <div class="time-and-place__descriptions">
+            <div class="time-and-place-description">
+                <h2>ЗАГС - 12,00</h2>
+                <h3>Соломенский ЗАГС, Киев, бульв. И. Лепсе, 1/28</h3>
+            </div>
+            <div class="time-and-place-description">
+                <h2>ЗАГС - 12,00</h2>
+                <h3>Соломенский ЗАГС, Киев, бульв. И. Лепсе, 1/28</h3>
+            </div>
+            <div class="time-and-place-description">
+                <h2>ЗАГС - 12,00</h2>
+                <h3>Соломенский ЗАГС, Киев, бульв. И. Лепсе, 1/28</h3>
+            </div>
+
+            <div class="time-and-place-descriptions__buttons">
+                <button class="time-and-place-descriptions__button button">
+                    <i class="i-plus-in-circle"></i><span>Размещение</span>
+                </button>
+                <div class="time-and-place-descriptions__info">
+                    1. Недалеко от ресторана где будет происходить празднование есть отель Lavilia, http://lavilia.com/
+                    ул. Академика Вильямса 36<br>
+                    2. Также недалеко есть интересній комплекс "Фортеця Гетьмана" - http://www.fortetsya-hetman.com/, с.
+                    Гатне, вул. Інститутська, 103<br>
+                    3. Для тех кто хочет поселиться ближе к центру Киева рекомендуем Premier Palace Hotel, вул.
+                    Пушкінська, 5-7
+                </div>
+            </div>
+        </div>
+        <div class="time-and-place__places">
+            <div class="time-and-place__place" id="event1">
+                <div id="event1Map" class="time-and-place__map"></div>
+                <input type="text" hidden id="event1MapLat" value="50.456524">
+                <input type="text" hidden id="event1MapLng" value="30.637878">
+            </div>
+
+            <div class="time-and-place__place" id="event2">
+                <div id="event2Map" class="time-and-place__map"></div>
+                <input type="text" hidden id="event2MapLat" value="50.456524">
+                <input type="text" hidden id="event2MapLng" value="30.637878">
+            </div>
+
+            <div class="time-and-place__place" id="event3">
+                <div id="event3Map" class="time-and-place__map"></div>
+                <input type="text" hidden id="event3MapLat" value="50.456524">
+                <input type="text" hidden id="event3MapLng" value="30.637878">
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="libs/slick/slick.min.js"></script>
 <script src="scripts/themes/t2/common.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGNCIsl2nCw-Xfac-MVjnYbeMkR1yxSsU&callback=initMap"
+        async defer></script>
+<script>
+    var map1;
+    var map3;
+    var map2;
+
+    function initMap() {
+        map1 = new google.maps.Map(document.getElementById('event1Map'), {
+            center: {lat: parseFloat($("#event1MapLat").val()), lng: parseFloat($("#event1MapLng").val())},
+            zoom: 15
+        });
+        map2 = new google.maps.Map(document.getElementById('event2Map'), {
+            center: {lat: parseFloat($("#event2MapLat").val()), lng: parseFloat($("#event2MapLng").val())},
+            zoom: 15
+        });
+        map3 = new google.maps.Map(document.getElementById('event3Map'), {
+            center: {lat: parseFloat($("#event3MapLat").val()), lng: parseFloat($("#event3MapLng").val())},
+            zoom: 15
+        });
+    }
+</script>
 </body>
 </html>
