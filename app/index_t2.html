@@ -46,14 +46,14 @@
 
     <div class="mobile-header__nav nav">
         <ul class="nav__items">
-            <li class="nav__item"><a class="nav__item--link" href="#about-us">Главная</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#history">О нас</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#time-and-place">Наша история</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#timetable">Родственники</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#interview">Программа</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#guests-block">Схема проезда</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#gifts-block">Гости</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#photo-gallery-block">Галерея</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#main">Главная</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#about-us">О нас</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#history">Наша история</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#relatives">Родственники</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#program">Программа</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#driving-directions">Схема проезда</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#guests">Гости</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#gallery">Галерея</a></li>
         </ul>
     </div>
 </header>
@@ -61,12 +61,12 @@
     <div class="header__nav nav container">
         <ul class="nav__items nav__items--left-side">
             <li class="nav__item"><a class="nav__item--link" href="#main">Главная</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#ubout-us">О нас</a></li>
+            <li class="nav__item"><a class="nav__item--link" href="#about-us">О нас</a></li>
             <li class="nav__item"><a class="nav__item--link" href="#history">Наша история</a></li>
             <li class="nav__item"><a class="nav__item--link" href="#relatives">Родственники</a></li>
         </ul>
         <ul class="nav__items nav__items--center">
-            <li class="nav__item"><a class="nav__item--link nav__item--logo logo" href="#">C <i class="i-heart"></i>
+            <li class="nav__item"><a class="nav__item--link nav__item--logo logo" href="#main">C <i class="i-heart"></i>
                 A</a></li>
         </ul>
         <ul class="nav__items nav__items--right-side">
@@ -185,6 +185,7 @@
 </div>
 <div class="empty-block"></div>
 <div class="history content slide slide-history">
+    <a name="#history"></a>
     <h2 class="block__text main-title">Наша <i class="i-two-hearts"></i> история</h2>
     <div class="history__items container">
         <div class="history__item">
@@ -244,6 +245,7 @@
             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 <div class="relatives-block slide slide-relatives">
+    <a name="#relatives"></a>
     <h2 class="block__text main-title line line--under">Родственники</h2>
     <div class="relatives">
         <div class="relatives__container">
@@ -354,6 +356,7 @@
 </div>
 <div class="empty-block empty-block--white"></div>
 <div class="time-and-place slide slide-time-and-place">
+    <a name="#driving-directions"></a>
     <div class="container">
         <div class="time-and-place__routes routes">
             <div class="time-and-place__route route">
@@ -424,19 +427,35 @@
                 <input type="text" hidden id="event1MapLat" value="50.456524">
                 <input type="text" hidden id="event1MapLng" value="30.637878">
             </div>
-
             <div class="time-and-place__place" id="event2">
                 <div id="event2Map" class="time-and-place__map"></div>
                 <input type="text" hidden id="event2MapLat" value="50.456524">
                 <input type="text" hidden id="event2MapLng" value="30.637878">
             </div>
-
             <div class="time-and-place__place" id="event3">
                 <div id="event3Map" class="time-and-place__map"></div>
                 <input type="text" hidden id="event3MapLat" value="50.456524">
                 <input type="text" hidden id="event3MapLng" value="30.637878">
             </div>
+            <div class="time-and-places__buttons">
+                <button type="button"
+                        class="button change-event-button change-event-button--active"></button>
+                <button type="button" class="button change-event-button"></button>
+                <button type="button" class="button change-event-button"></button>
+            </div>
         </div>
+    </div>
+</div>
+<div class="timetable slide slide-timetable">
+    <div class="timetable__board">
+        <div class="board__event board-event">
+            <div class="board-event__logo">
+                <img src="" alt="">
+            </div>
+            <div class="board-event__time"></div>
+            <div class="board-event__info"></div>
+        </div>
+
     </div>
 </div>
 

@@ -1,3 +1,14 @@
+function scrollTo() {
+    var link = $(this).find(".nav__item--link"),
+        linkHref = link.attr("href"),
+        scroll = $("a[name='" + linkHref + "']").offset().top
+    ;
+
+    $("html, body").animate({
+        scrollTop: scroll
+    }, 1500);
+}
+
 function rotate(element, degree) {
     element.css({
         '-webkit-transform': 'rotate(' + degree + 'deg)',
@@ -79,6 +90,36 @@ function Timer(selector) {
     console.log("timerObj: ", timerObj);
 }
 
+function MobileMenu(selector) {
+    var m = $(this);
+
+    m.menu = $(selector);
+    m.button = m.menu.find(".toggle-nav");
+    m.mobMenu = m.menu.find(".nav");
+    m.mobMenuItem = m.mobMenu.find(".nav__item");
+
+    m.toggle = function () {
+        m.button.toggleClass("toggle-nav--active");
+        m.mobMenu.toggleClass("nav--active");
+    };
+
+    m.button.click(m.toggle);
+    m.mobMenuItem.click(scrollTo);
+    m.mobMenuItem.click(m.toggle);
+}
+
+function DesktopMenu(selector) {
+    var m = $(this);
+
+    m.menu = $(selector);
+    m.deskMenuItem = m.menu.find(".nav__item");
+
+    m.deskMenuItem.click(scrollTo);
+}
+
+
 $(function () {
-    var timer = new Timer(".date-timer");
+    var mobMenu = new MobileMenu(".mobile-header"),
+        deskMenu = new DesktopMenu(".header"),
+        timer = new Timer(".date-timer");
 });

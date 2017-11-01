@@ -10,6 +10,11 @@
         font-size: 14px;
         line-height: 20px;
     }
+
+    .history__video {
+        width: 980px;
+        height: 551px;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -25,6 +30,148 @@
     .header {
         display: none;
     }
+
+    .title-block {
+        height: 620px;
+    }
+
+    .about-us__img {
+        border-width: 5px;
+    }
+    .about-us-logo {
+        margin-top: 95px;
+        width: 70px;
+        height: 70px;
+        line-height: 93px;
+    }
+
+    .empty-block {
+        height: 420px;
+    }
+
+    .history .block__text {
+        margin-bottom: 50px;
+    }
+
+    .history__item {
+        padding-top: 75px;
+        padding-bottom: 35px;
+    }
+
+    .history__item:before {
+        content: none;
+    }
+
+    .history__item .history-img-block,
+    .history__item .history-title,
+    .history__item .history-story-block,
+    .history__item:nth-child(2n) .history-img-block,
+    .history__item:nth-child(2n) .history-title,
+    .history__item:nth-child(2n) .history-story-block {
+        float: none;
+        width: 100%;
+    }
+
+    .history__item .history-title,
+    .history__item:nth-child(2n) .history-title {
+        position: absolute;
+        padding: 0 25px;
+        top: 0;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    .history-img-block {
+        margin-bottom: 25px;
+    }
+
+    .history__video {
+        width: 640px;
+        height: 360px;
+    }
+
+    .relatives__container {
+        max-width: 640px;
+    }
+
+    .relative {
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    .relative:nth-child(3n) {
+        margin-right: 4%;
+    }
+
+    .relative:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .relative__description {
+        margin-bottom: 0;
+    }
+
+    .empty-block--white {
+        height: 100px;
+    }
+
+    .routes {
+        text-align: left;
+        padding-top: 111px;
+        padding-right: 0;
+        position: relative;
+        height: auto;
+    }
+
+    .routes__title,
+    .route {
+        float: none;
+    }
+
+    .routes__title {
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .route {
+        margin-bottom: 25px;
+        margin-right: 0;
+    }
+
+    .route__info {
+        display: block;
+        position: static;
+        width: 100%;
+    }
+
+    .time-and-place__descriptions,
+    .time-and-place__places {
+        float: none;
+        width: 100%;
+    }
+
+    .time-and-place__descriptions {
+        margin-bottom: 50px;
+    }
+
+    .time-and-place-description {
+        min-height: 77px;
+    }
+
+    .time-and-place-description h2 {
+        margin-bottom: 15px;
+    }
+
+    .time-and-place-descriptions__info {
+        margin-top: 50px;
+        position: static;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 680px) {
@@ -33,10 +180,65 @@
         max-width: none;
         margin: 0 auto;
     }
+
+    .title-block {
+        background-position-x: -800px;
+    }
+
+    .title-block__separator {
+        width: 100%;
+    }
+
+    .about-us__item {
+        float: none;
+        width: 100%;
+    }
+
+    .about-us__item:nth-child(2) {
+        margin: 50px auto;
+    }
+
+    .about-us-logo {
+        margin-top: 0;
+    }
+
+    .empty-block {
+        height: 320px;
+    }
+
+    .history__video {
+        width: 100%;
+    }
+
+    .relative {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .relative:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .empty-block--white {
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title-block {
+        background-position-x: -900px;
+    }
+
+    .history__video {
+        height: 270px;
+    }
 }
 
 @media screen and (max-width: 410px) {
     .mobile-header .nav__items {
         width: 100%;
+    }
+    .title-block {
+        background-position-x: -950px;
     }
 }

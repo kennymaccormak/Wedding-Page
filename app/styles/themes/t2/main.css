@@ -954,6 +954,12 @@ a {
     margin: 0 auto;
 }
 
+.relatives__container:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
 .relative {
     float: left;
     width: 32%;
@@ -1044,7 +1050,12 @@ a {
     text-align: right;
     padding: 70px 47px 0 0;
     margin-bottom: 40px;
-    height: 111px;
+}
+
+.routes:after {
+    content: '';
+    clear: both;
+    display: block;
 }
 
 .routes__title {
@@ -1139,8 +1150,9 @@ a {
     padding: 14px 18px;
     position: absolute;
     top: 70px;
-    left: 30px;
+    left: -80px;
     width: 270px;
+    z-index: 1;
 }
 
 .route__button:hover + .route__info {
@@ -1155,6 +1167,7 @@ a {
 .time-and-place-description {
     background: url("../../../img/theme2/icon_map-marker.png") no-repeat left top;
     padding-left: 84px;
+    padding-right: 20px;
     margin-bottom: 40px;
 }
 
@@ -1180,7 +1193,7 @@ a {
     height: 40px;
 }
 
-.time-and-place-descriptions__button span{
+.time-and-place-descriptions__button span {
     color: #383957;
     font-family: "Comfortaa", sans-serif;
     font-size: 1.18rem;
@@ -1223,33 +1236,11 @@ a {
     display: block;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .time-and-place__places {
     float: left;
     position: relative;
     width: 63%;
+    padding-top: 500px;
 }
 
 .time-and-place__place {
@@ -1265,44 +1256,31 @@ a {
     width: 100%;
 }
 
+.time-and-places__buttons {
+    text-align: center;
+    height: 126px;
+    line-height: 126px;
+}
 
+.change-event-button {
+    background: transparent;
+    border: 1px solid #cf3d63;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 16px;
+    width: 14px;
+    height: 14px;
+}
 
+.change-event-button:last-child {
+    margin-right: 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.change-event-button--active {
+    background: #cf3d63;
+}
 
 
 
