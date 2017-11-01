@@ -446,18 +446,188 @@
         </div>
     </div>
 </div>
-<div class="timetable slide slide-timetable">
-    <div class="timetable__board">
-        <div class="board__event board-event">
-            <div class="board-event__logo">
-                <img src="" alt="">
+<div class="timetable content slide slide-timetable">
+    <a name="#program"></a>
+    <div class="timetable__board board">
+        <div class="board__container">
+            <div class="board__event board-event">
+                <div class="board-event__logo">
+                    <img src="img/theme2/timetable-icons/ev1.png" alt="event1img">
+                </div>
+                <div class="board-event__time">11:00</div>
+                <div class="board-event__info">Выкуп невесты</div>
             </div>
-            <div class="board-event__time"></div>
-            <div class="board-event__info"></div>
+            <div class="board__event board-event">
+                <div class="board-event__logo">
+                    <img src="img/theme2/timetable-icons/ev2.png" alt="event1img">
+                </div>
+                <div class="board-event__time">11:30</div>
+                <div class="board-event__info">Выезд автобусом от дома невесты</div>
+            </div>
+            <div class="board__event board-event">
+                <div class="board-event__logo">
+                    <img src="img/theme2/timetable-icons/ev3.png" alt="event1img">
+                </div>
+                <div class="board-event__time">13:00</div>
+                <div class="board-event__info">Выкуп невесты</div>
+            </div>
+            <div class="board__event board-event">
+                <div class="board-event__logo">
+                    <img src="img/theme2/timetable-icons/ev4.png" alt="event1img">
+                </div>
+                <div class="board-event__time">15:00</div>
+                <div class="board-event__info">Выкуп невесты</div>
+            </div>
         </div>
-
+    </div>
+    <!--<div class="timetable__buttons">
+        <button class="timetable__button button">
+            <i class="i-plus-in-circle"></i><span>Развернуть</span>
+        </button>
+    </div>-->
+</div>
+<div class="interview content slide slide-interview">
+    <h2 class="block__text main-title line line--under">Подтвердите участие</h2>
+    <div class="interview__container">
+        <div class="container">
+            <div class="form-container">
+                <form action="" method="post" class="form interview__form" id="interviewForm">
+                    <div class="form-group">
+                        <input class="form-item input" type="text" placeholder="ФИО">
+                        <input class="form-item input" type="text" placeholder="№ телефона">
+                        <div class="form-item multi-select multi-select--active">
+                            <button class="button multi-select__button button--drop-down"></button>
+                            <div class="drop-down-list">
+                                <div class="drop-down-list__item">ЗАГС</div>
+                                <div class="drop-down-list__item drop-down-list__item--selected">Венчание</div>
+                                <div class="drop-down-list__item drop-down-list__item--selected">Ресторан</div>
+                                <select name="interviewSelect" class="default-multi-select" id="interviewSelect" multiple>
+                                    <option value="ЗАГС"></option>
+                                    <option value="Венчание" selected></option>
+                                    <option value="Ресторан" selected></option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="form-item button button--positive">Подтвердить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
+<div class="guests-block slide slide-guests">
+    <a name="#guests"></a>
+    <h2 class="block__text main-title line line--under">Список гостей</h2>
+
+    <div class="guests">
+        <div class="guests__container">
+            <div class="guest">
+                <div class="guest__img">
+                    <img src="img/theme2/guests/guest1.png" class="guest-img--img">
+                    <div class="layout"></div>
+                    <div class="guest-img__social social">
+                        <div class="social__item"><a class="social__item--link social-vk" href="#">vk</a></div>
+                        <div class="social__item"><a class="social__item--link social-fb" href="#">fb</a></div>
+                        <div class="social__item"><a class="social__item--link social-tw" href="#">tw</a></div>
+                        <div class="social__item"><a class="social__item--link social-inst" href="#">inst</a></div>
+                    </div>
+                    <div class="table-number">Стол 2</div>
+                </div>
+                <div class="guest__description">
+                    <h3>Федорова Алена</h3>
+                    <p>Сестра невесты</p>
+                </div>
+            </div>
+            <div class="guest">
+                <div class="guest__img">
+                    <img src="img/theme2/guests/guest2.png" class="guest-img--img">
+                    <div class="layout"></div>
+                    <div class="guest-img__social social">
+                        <div class="social__item"><a class="social__item--link social-vk" href="#">vk</a></div>
+                        <div class="social__item"><a class="social__item--link social-fb" href="#">fb</a></div>
+                        <div class="social__item"><a class="social__item--link social-tw" href="#">tw</a></div>
+                        <div class="social__item"><a class="social__item--link social-inst" href="#">inst</a></div>
+                    </div>
+                    <div class="table-number">Стол 2</div>
+                </div>
+                <div class="guest__description">
+                    <h3>Федорова Алена</h3>
+                    <p>Сестра невесты</p>
+                </div>
+            </div>
+            <div class="guest">
+                <div class="guest__img">
+                    <img src="img/theme2/guests/guest3.png" class="guest-img--img">
+                    <div class="layout"></div>
+                    <div class="guest-img__social social">
+                        <div class="social__item"><a class="social__item--link social-vk" href="#">vk</a></div>
+                        <div class="social__item"><a class="social__item--link social-fb" href="#">fb</a></div>
+                        <div class="social__item"><a class="social__item--link social-tw" href="#">tw</a></div>
+                        <div class="social__item"><a class="social__item--link social-inst" href="#">inst</a></div>
+                    </div>
+                    <div class="table-number">Стол 2</div>
+                </div>
+                <div class="guest__description">
+                    <h3>Федорова Алена</h3>
+                    <p>Сестра невесты</p>
+                </div>
+            </div>
+            <div class="guest">
+                <div class="guest__img">
+                    <img src="img/theme2/guests/guest1.png" class="guest-img--img">
+                    <div class="layout"></div>
+                    <div class="guest-img__social social">
+                        <div class="social__item"><a class="social__item--link social-vk" href="#">vk</a></div>
+                        <div class="social__item"><a class="social__item--link social-fb" href="#">fb</a></div>
+                        <div class="social__item"><a class="social__item--link social-tw" href="#">tw</a></div>
+                        <div class="social__item"><a class="social__item--link social-inst" href="#">inst</a></div>
+                    </div>
+                    <div class="table-number">Стол 2</div>
+                </div>
+                <div class="guest__description">
+                    <h3>Федорова Алена</h3>
+                    <p>Сестра невесты</p>
+                </div>
+            </div>
+            <div class="guest">
+                <div class="guest__img">
+                    <img src="img/theme2/guests/guest2.png" class="guest-img--img">
+                    <div class="layout"></div>
+                    <div class="guest-img__social social">
+                        <div class="social__item"><a class="social__item--link social-vk" href="#">vk</a></div>
+                        <div class="social__item"><a class="social__item--link social-fb" href="#">fb</a></div>
+                        <div class="social__item"><a class="social__item--link social-tw" href="#">tw</a></div>
+                        <div class="social__item"><a class="social__item--link social-inst" href="#">inst</a></div>
+                    </div>
+                    <div class="table-number">Стол 2</div>
+                </div>
+                <div class="guest__description">
+                    <h3>Федорова Алена</h3>
+                    <p>Сестра невесты</p>
+                </div>
+            </div>
+            <div class="guest">
+                <div class="guest__img">
+                    <img src="img/theme2/guests/guest3.png" class="guest-img--img">
+                    <div class="layout"></div>
+                    <div class="guest-img__social social">
+                        <div class="social__item"><a class="social__item--link social-vk" href="#">vk</a></div>
+                        <div class="social__item"><a class="social__item--link social-fb" href="#">fb</a></div>
+                        <div class="social__item"><a class="social__item--link social-tw" href="#">tw</a></div>
+                        <div class="social__item"><a class="social__item--link social-inst" href="#">inst</a></div>
+                    </div>
+                    <div class="table-number">Стол 2</div>
+                </div>
+                <div class="guest__description">
+                    <h3>Федорова Алена</h3>
+                    <p>Сестра невесты</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 
 <script src="libs/slick/slick.min.js"></script>
 <script src="scripts/themes/t2/common.js"></script>
