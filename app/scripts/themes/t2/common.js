@@ -121,5 +121,16 @@ function DesktopMenu(selector) {
 $(function () {
     var mobMenu = new MobileMenu(".mobile-header"),
         deskMenu = new DesktopMenu(".header"),
-        timer = new Timer(".date-timer");
+        timer = new Timer(".date-timer")
+    ;
+
+    var $grid = $('.grid').masonry({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        columnWidth: '.grid-sizer'
+    });
+// layout Masonry after each image loads
+    $grid.imagesLoaded().progress( function() {
+        $grid.masonry();
+    });
 });

@@ -172,6 +172,51 @@
         position: static;
         width: 100%;
     }
+
+    .timetable__board:after {
+        content: '';
+        background: #cf3d63;
+        border-radius: 3px;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 7px;
+        left: 0;
+        top: 403px
+    }
+
+    .interview__form .form-item {
+        margin-bottom: 25px;
+    }
+
+    .interview__form .form-item:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .guests__container {
+        max-width: 640px;
+    }
+
+    .guest {
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    .guest:nth-child(3n) {
+        margin-right: 4%;
+    }
+
+    .guest:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .guest__description {
+        margin-bottom: 0;
+    }
+
+    .table {
+        width: 49%;
+    }
 }
 
 @media screen and (max-width: 680px) {
@@ -221,6 +266,19 @@
 
     .empty-block--white {
         height: 70px;
+    }
+
+    .guest {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .guest:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .table {
+        width: 100%;
     }
 }
 
