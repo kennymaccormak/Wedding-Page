@@ -130,7 +130,7 @@ $(function () {
         columnWidth: '.grid-sizer'
     });
 // layout Masonry after each image loads
-    $grid.imagesLoaded().progress( function() {
+    $grid.imagesLoaded().progress(function () {
         $grid.masonry();
     });
 });

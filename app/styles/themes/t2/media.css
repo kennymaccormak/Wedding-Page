@@ -38,6 +38,7 @@
     .about-us__img {
         border-width: 5px;
     }
+
     .about-us-logo {
         margin-top: 95px;
         width: 70px;
@@ -217,6 +218,51 @@
     .table {
         width: 49%;
     }
+
+    .wishes-control {
+        left: 50%;
+        margin-left: -25px;
+    }
+
+    .wish {
+        margin-bottom: 40px;
+        height: 370px;
+    }
+
+    .wisher-text p {
+        padding: 5px 15px 10px;
+    }
+
+    .gift {
+        margin-right: 0;
+    }
+
+    .map-info__title {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .map-info__button {
+        width: 100%;
+    }
+
+    .contacts__title {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .footer__social,
+    .contact {
+        text-align: center;
+        text-indent: 0;
+    }
+
+    .footer .social__item,
+    .footer .social__item--link {
+        width: 25px;
+        height: 25px;
+    }
+
 }
 
 @media screen and (max-width: 680px) {
@@ -280,6 +326,50 @@
     .table {
         width: 100%;
     }
+
+    .wishes__container {
+        height: 850px;
+    }
+
+    .wish {
+        height: auto;
+    }
+
+    .wisher,
+    .wisher-text {
+        float: none;
+        width: 100%;
+    }
+
+    .footer__item {
+        float: none;
+    }
+
+    .footer-item__logo,
+    .map-info,
+    .contacts {
+        width: 100%;
+    }
+
+    .map-info__title:after {
+        margin-left: -43px;
+        left: 50%;
+    }
+
+    .map-info__button {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .footer-item__logo {
+        padding-bottom: 40px;
+    }
+
+    .footer__social {
+        margin-top: 20px;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -293,9 +383,14 @@
 }
 
 @media screen and (max-width: 410px) {
+    .content {
+        padding: 50px 0;
+    }
+
     .mobile-header .nav__items {
         width: 100%;
     }
+
     .title-block {
         background-position-x: -950px;
     }

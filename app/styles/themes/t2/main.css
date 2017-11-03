@@ -2123,8 +2123,8 @@ a {
 
 .map-info,
 .contacts {
-     width: 30%;
- }
+    width: 30%;
+}
 
 .map-info__title {
     color: #ffffff;
@@ -2185,8 +2185,6 @@ a {
     position: static;
     z-index: 1;
 }
-
-
 
 /*end footer*/
 
