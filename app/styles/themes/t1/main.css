@@ -133,6 +133,10 @@ p {
     resize: none;
 }
 
+.input::-ms-clear {
+    display: none;
+}
+
 .select {
     background: #fff;
     border: 2px solid #98a6ba;
@@ -1602,6 +1606,7 @@ p {
 
 .wishes {
     background: #fffcf4;
+    overflow: hidden;
 }
 
 .wishes__text {
