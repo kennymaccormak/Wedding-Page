@@ -385,6 +385,14 @@
     }
 }
 
+@media screen and (max-width: 510px) {
+
+    .board-event {
+        float: left;
+        width: 50%;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .title-block {
         background-position-x: -900px;
@@ -400,6 +408,7 @@
     body {
         min-width: 394px;
     }
+
     .content {
         padding: 50px 0;
     }
