@@ -360,6 +360,7 @@
         display: block;
         margin: 0 auto;
         width: 50%;
+        min-width: 170px;
     }
 
     .footer-item__logo {
@@ -370,6 +371,18 @@
         margin-top: 20px;
     }
 
+}
+
+@media screen and (max-width: 570px) {
+    .interview__container {
+        padding-top: 65px;
+    }
+
+    .interview__form .form-item,
+    .interview__form .form-item:nth-child(2n) {
+        display: block;
+        margin: 0 auto 30px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -383,6 +396,10 @@
 }
 
 @media screen and (max-width: 410px) {
+    html,
+    body {
+        min-width: 394px;
+    }
     .content {
         padding: 50px 0;
     }
