@@ -99,6 +99,7 @@ function MobileMenu(selector) {
     m.mobMenuItem = m.mobMenu.find(".nav__item");
 
     m.toggle = function () {
+        m.menu.toggleClass("mobile-header--active");
         m.button.toggleClass("toggle-nav--active");
         m.mobMenu.toggleClass("nav--active");
     };

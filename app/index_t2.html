@@ -35,29 +35,6 @@
 </head>
 <body>
 <a name="#main"></a>
-<header class="mobile-header">
-    <div class="mobile-header__items container">
-        <a class="mobile-header__item logo" href="#">C <i class="i-heart"></i> A</a>
-        <div class="mobile-header__item toggle-nav"> <!-- toggle-nav--active -->
-            <span class="toggle-nav__item"></span>
-            <span class="toggle-nav__item"></span>
-            <span class="toggle-nav__item"></span>
-        </div>
-    </div>
-
-    <div class="mobile-header__nav nav">
-        <ul class="nav__items">
-            <li class="nav__item"><a class="nav__item--link" href="#main">Главная</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#about-us">О нас</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#history">Наша история</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#relatives">Родственники</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#program">Программа</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#driving-directions">Схема проезда</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#guests">Гости</a></li>
-            <li class="nav__item"><a class="nav__item--link" href="#gallery">Галерея</a></li>
-        </ul>
-    </div>
-</header>
 <header class="header">
     <div class="header__nav nav container">
         <ul class="nav__items nav__items--left-side">
@@ -79,6 +56,29 @@
     </div>
 </header>
 <div class="title-block slide slide-title">
+    <header class="mobile-header">
+        <div class="mobile-header__items container">
+            <a class="mobile-header__item logo" href="#">C <i class="i-heart"></i> A</a>
+            <div class="mobile-header__item toggle-nav"> <!-- toggle-nav--active -->
+                <span class="toggle-nav__item"></span>
+                <span class="toggle-nav__item"></span>
+                <span class="toggle-nav__item"></span>
+            </div>
+        </div>
+
+        <div class="mobile-header__nav nav">
+            <ul class="nav__items">
+                <li class="nav__item"><a class="nav__item--link" href="#main">Главная</a></li>
+                <li class="nav__item"><a class="nav__item--link" href="#about-us">О нас</a></li>
+                <li class="nav__item"><a class="nav__item--link" href="#history">Наша история</a></li>
+                <li class="nav__item"><a class="nav__item--link" href="#relatives">Родственники</a></li>
+                <li class="nav__item"><a class="nav__item--link" href="#program">Программа</a></li>
+                <li class="nav__item"><a class="nav__item--link" href="#driving-directions">Схема проезда</a></li>
+                <li class="nav__item"><a class="nav__item--link" href="#guests">Гости</a></li>
+                <li class="nav__item"><a class="nav__item--link" href="#gallery">Галерея</a></li>
+            </ul>
+        </div>
+    </header>
     <div class="title-block-container">
         <h1 class="title-block__text block__text main-title">
             <span class="main-title__item">Сергей</span>
@@ -163,6 +163,7 @@
             </div>
             <div class="about-us__item">
                 <div class="about-us-logo"><i class="i-heart-white"></i></div>
+                <div class="about-us-logo about-us-logo--mobile"><i class="i-heart"></i></div>
             </div>
             <div class="about-us__item">
                 <div class="about-us__img">
@@ -193,6 +194,7 @@
             <div class="history-img-block">
                 <img class="history-img-block__img" src="img/theme2/history/hist1.png" alt="hist1img">
                 <div class="history-img-block__layout layout"></div>
+                <div class="mobile-history-title">Знакомство</div>
             </div>
             <div class="history-title">Знакомство</div>
             <div class="history-story-block">
@@ -210,6 +212,7 @@
             <div class="history-img-block">
                 <img class="history-img-block__img" src="img/theme2/history/hist2.png" alt="hist1img">
                 <div class="history-img-block__layout layout"></div>
+                <div class="mobile-history-title">Первое свидание</div>
             </div>
             <div class="history-title">Первое свидание</div>
             <div class="history-story-block">
@@ -227,6 +230,7 @@
             <div class="history-img-block">
                 <img class="history-img-block__img" src="img/theme2/history/hist3.png" alt="hist1img">
                 <div class="history-img-block__layout layout"></div>
+                <div class="mobile-history-title">Первое путешествие</div>
             </div>
             <div class="history-title">Первое путешествие</div>
             <div class="history-story-block">
@@ -250,7 +254,15 @@
     <h2 class="block__text main-title line line--under">Родственники</h2>
     <div class="relatives">
         <div class="relatives__container">
-            <div class="relative">
+            <button type="button" class="relatives__button button button--move button--move-left">
+                <span></span>
+                <span></span>
+            </button>
+            <button type="button" class="relatives__button button button--move button--move-right">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="relative relative--active">
                 <div class="relative__img">
                     <img src="img/theme2/relatives/rel1.png" class="relative-img--img">
                     <div class="layout"></div>
@@ -519,10 +531,17 @@
 <div class="guests-block slide slide-guests">
     <a name="#guests"></a>
     <h2 class="block__text main-title line line--under">Список гостей</h2>
-
     <div class="guests">
         <div class="guests__container">
-            <div class="guest">
+            <button type="button" class="relatives__button button button--move button--move-left">
+                <span></span>
+                <span></span>
+            </button>
+            <button type="button" class="relatives__button button button--move button--move-right">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="guest guest--active">
                 <div class="guest__img">
                     <img src="img/theme2/guests/guest1.png" class="guest-img--img">
                     <div class="layout"></div>
@@ -633,6 +652,14 @@
 <div class="tables-schema-block content slide slide-table-schema">
     <h2 class="block__text main-title line line--under">Схема рассадки</h2>
     <div class="tables-schema container">
+        <button type="button" class="tables__button button button--move button--move-left">
+            <span></span>
+            <span></span>
+        </button>
+        <button type="button" class="tables__button button button--move button--move-right">
+            <span></span>
+            <span></span>
+        </button>
         <div class="table">
             <div class="table-title">Стол № 1</div>
             <div class="table-img">
@@ -640,15 +667,13 @@
             </div>
             <div class="table__info">Алена, Игорь, Андрей Иванов, Светлана и Федор Шевченко, Василий Иванович</div>
         </div>
-
-        <div class="table">
+        <div class="table table--active">
             <div class="table-title">Стол № 2</div>
             <div class="table-img">
                 <img src="img/theme2/img_table.png" alt="table" class="table-img__img">
             </div>
             <div class="table__info">Алена, Игорь, Андрей Иванов, Светлана и Федор Шевченко, Василий Иванович</div>
         </div>
-
         <div class="table">
             <div class="table-title">Стол № 3</div>
             <div class="table-img">
@@ -656,7 +681,6 @@
             </div>
             <div class="table__info">Алена, Игорь, Андрей Иванов, Светлана и Федор Шевченко, Василий Иванович</div>
         </div>
-
         <div class="table">
             <div class="table-title">Стол № 4</div>
             <div class="table-img">
@@ -664,7 +688,6 @@
             </div>
             <div class="table__info">Алена, Игорь, Андрей Иванов, Светлана и Федор Шевченко, Василий Иванович</div>
         </div>
-
         <div class="table">
             <div class="table-title">Стол № 5</div>
             <div class="table-img">
@@ -721,7 +744,15 @@
     <div class="container">
         <button type="button" class="wishes-control button wishes-control--next"></button>
         <div class="wishes__container">
-            <div class="wish">
+            <button type="button" class="wishes__button button button--move button--move-left">
+                <span></span>
+                <span></span>
+            </button>
+            <button type="button" class="wishes__button button button--move button--move-right">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="wish wish--active">
                 <div class="wisher">
                     <div class="wisher__img">
                         <img src="img/theme2/guests/guest1.png" alt="w1" class="wisher__img--img">
@@ -767,8 +798,8 @@
         <button type="button" class="wishes-control button wishes-control--prev"></button>
     </div>
     <div class="wishes__buttons">
-        <button class="wishes__button button"><i class="i-plus-in-circle i-plus-in-circle--large"></i></button>
-        <button class="wishes__button button button--positive">Отправить</button>
+        <button class="wishes__button-add button"><i class="i-plus-in-circle i-plus-in-circle--large"></i></button>
+        <button class="wishes__button-add button button--positive">Отправить</button>
     </div>
 </div>
 <div class="gifts-block content slide slide-gifts">
