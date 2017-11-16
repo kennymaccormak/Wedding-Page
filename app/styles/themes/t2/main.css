@@ -285,6 +285,7 @@ a {
     position: relative;
     width: 47px;
     height: 89px;
+    z-index: 999;
 }
 
 .button--move span {
@@ -1416,6 +1417,10 @@ a {
     width: 100%;
 }
 
+.time-and-place .container {
+    max-width: none;
+}
+
 .time-and-place__routes {
     width: 100%;
 }
@@ -1439,6 +1444,10 @@ a {
     line-height: 41px;
     float: right;
     margin-right: 50px;
+}
+
+.routes__title.line:after {
+    content: none;
 }
 
 .route {
@@ -1535,6 +1544,21 @@ a {
 .time-and-place__descriptions {
     float: left;
     width: 37%;
+}
+
+.time-and-place__button {
+    margin-top: -45px;
+    display: none;
+    position: absolute;
+    top: 30%;
+}
+
+.time-and-place__button.button--move-left {
+    left: 0;
+}
+
+.time-and-place__button.button--move-right {
+    right: 0;
 }
 
 .time-and-place-description {

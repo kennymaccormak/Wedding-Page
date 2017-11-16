@@ -223,25 +223,97 @@
     }
 
     .routes__title {
+        font-size: 1.77rem;
+        line-height: 3rem;
+        text-align: center;
+        margin: 0 0 0 -150px;
         position: absolute;
-        top: 60px;
-        left: 0;
+        width: 300px;
+        top: 35px;
+        left: 50%;
+    }
+
+    .routes__title.line:after {
+        content: '';
     }
 
     .route {
-        margin-bottom: 25px;
-        margin-right: 0;
+        text-align: center;
+        float: left;
+        margin: 0 2% 20px 0;
+        width: 46%;
+    }
+
+    .route:nth-child(2n) {
+        text-align: center;
+        margin: 0 0 20px 2%;
     }
 
     .route__info {
+        display: none;
+        top: 50px;
+        left: 60px;
+    }
+
+    .time-and-place-descriptions__buttons {
+        display: none;
+    }
+
+    .time-and-place-descriptions__buttons--mobile {
         display: block;
+        text-align: center;
+    }
+
+    .time-and-place-descriptions__info {
         position: static;
+        margin: 20px auto;
+    }
+
+    .time-and-place__descriptions {
+        position: relative;
+        float: none;
+        width: 100%;
+        height: 120px;
+    }
+
+    .time-and-place-description {
+        background: transparent;
+        display: none;
+        padding: 0 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
     }
 
-    .time-and-place {
-        display: none;
+    .time-and-place-description--active {
+        display: block;
     }
+
+    .time-and-place__button {
+        display: block;
+    }
+
+    .time-and-place-description h2 {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .time-and-place-description h3 {
+        text-align: center;
+    }
+
+    .time-and-place__places {
+        width: 100%;
+    }
+
+
+
+
+
+
+
+
 
     .timetable__board:after {
         content: '';
@@ -488,6 +560,18 @@
         height: 70px;
     }
 
+    .route {
+        text-align: right;
+    }
+
+    .route:nth-child(2n) {
+        text-align: left;
+    }
+
+    .route:nth-child(2n) .route__info {
+        left: -70px;
+    }
+
     .footer__item {
         float: none;
     }
@@ -532,8 +616,7 @@
     }
 }
 
-@media screen and (max-width: 510px) {
-
+@media screen and (max-width: 520px) {
     .board-event {
         float: left;
         width: 50%;
