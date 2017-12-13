@@ -313,6 +313,44 @@ p {
     left: 5px;
 }
 
+.switches {
+    width: 368px;
+}
+
+.switches:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.switch {
+    background: transparent;
+    border: 1px solid #c6c6c6;
+    font-family: "Cormorant", sans-serif;
+    font-size: 1.46rem;
+    font-weight: 600;
+    line-height: 2.66rem;
+    text-align: center;
+    display: inline-block;
+    float: left;
+    height: 2.66rem;
+    width: 184px;
+}
+
+.switch:first-child {
+    border-right: none;
+}
+
+.switch:last-child {
+    border-left: none;
+}
+
+.switch--active {
+    background: #f05f75;
+    border-color: #f05f75;
+    color: #ffffff;
+}
+
 .border {
 }
 
@@ -1443,7 +1481,127 @@ p {
 
 /*end*/
 
-/*content => timetable*/
+/*content => routes*/
+
+.routes-and-location-block {
+    background: #f2f2f2;
+}
+
+.routes-and-location-block__switches {
+    margin: 0 auto 60px;
+}
+
+.routes-and-location-block__routes {
+    margin: 0 auto 30px;
+    width: 75%;
+}
+
+.routes-block__routes:last-of-type {
+    margin-bottom: 0;
+}
+
+.routes:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.route {
+    background: no-repeat 15px 7px;
+    box-sizing: border-box;
+    float: left;
+    padding: 0 15px 0 60px;
+    width: 50%;
+}
+
+.route--by-car {
+    background-image: url("../../../img/theme1/routes/icon_rout_car.png");
+}
+
+.route--by-train {
+    background-image: url("../../../img/theme1/routes/icon_rout_train.png");
+}
+
+.route--by-bus {
+    background-image: url("../../../img/theme1/routes/icon_rout_bus.png");
+}
+
+.route--by-plan {
+    background-image: url("../../../img/theme1/routes/icon_rout_plan.png");
+}
+
+.route__title {
+    color: #606060;
+    font-size: 1.06rem;
+    line-height: 1.46rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.route__info {
+    font-size: .93rem;
+    line-height: 1.46rem;
+}
+
+.routes {
+    display: block;
+}
+
+.routes-and-location-block__locations {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.locations {
+    display: block;
+}
+
+.location {
+    margin-bottom: 30px;
+}
+
+.location__info {
+    color: #606060;
+    font-size: .93rem;
+    line-height: 1.46rem;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.location__place {
+    background: url("../../../img/theme1/routes/icon_place.png") no-repeat 2px 4px;
+    font-size: .93rem;
+    line-height: 1.46rem;
+    padding-left: 15px;
+}
+
+.location__link {
+    color: #f05f75;
+    font-size: .93rem;
+    line-height: 1.46rem;
+    text-decoration: underline;
+    margin-left: 18px;
+}
+
+.routes-and-location-block__switches[data-switch="1"] ~ .routes {
+    display: block;
+}
+
+.routes-and-location-block__switches[data-switch="1"] ~ .locations {
+    display: none;
+}
+
+.routes-and-location-block__switches[data-switch="2"] ~ .routes {
+    display: none;
+}
+
+.routes-and-location-block__switches[data-switch="2"] ~ .locations {
+    display: block;
+}
+
+/*end*/
+
+/*content => interview*/
 
 .interview {
     background: url("../../../img/theme1/bg_interview.jpg") no-repeat center;
@@ -1522,7 +1680,6 @@ p {
 }
 
 .guest-photo {
-
 }
 
 .guest-photo img {
@@ -1560,6 +1717,83 @@ p {
 
 /*end*/
 
+/*content => history-gallery*/
+
+.tables-schema-block {
+    background: #eaecf4;
+}
+
+.tables-schema__text {
+    color: #414141;
+    margin-bottom: 60px;
+}
+
+.tables {
+    text-align: center;
+    width: 100%;
+}
+
+.table {
+    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 25px 50px;
+    width: 300px;
+}
+
+.table__title {
+    background: #f05f75;
+    color: #ffffff;
+    font-size: 1.33rem;
+    font-weight: 600;
+    line-height: 60px;
+    text-align: center;
+    height: 60px;
+    width: 100%;
+}
+
+.table__info {
+    background: #f1f2f7;
+    box-sizing: border-box;
+    padding: 30px;
+    width: 100%;
+    min-height: 230px;
+}
+
+.table-info__list {
+    text-align: left;
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0;
+}
+
+.table-info__list .list-item {
+    color: #646567;
+    font-size: 1rem;
+    line-height: 1.86rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*end*/
 /*content => history-gallery*/
 
 .history-gallery-block {
@@ -1760,7 +1994,8 @@ p {
 
 /*content => gifts*/
 
-.gifts-block {}
+.gifts-block {
+}
 
 .gifts__text {
     color: #414141;
@@ -1888,7 +2123,7 @@ p {
     height: auto;
 }
 
-.chosen-group__button{
+.chosen-group__button {
     position: absolute;
 }
 

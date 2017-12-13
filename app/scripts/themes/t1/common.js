@@ -218,6 +218,24 @@ function Timer(selector) {
 
 }
 
+function Switch(selector) {
+    var s = $(this);
+
+    s.switch = $(selector);
+    s.switch.btn = s.switch.find(".switch");
+
+    s.changeState = function () {
+        var $btn = $(this);
+        if ($btn.hasClass("switch--active")) {
+            return;
+        }
+        s.switch.btn.toggleClass("switch--active");
+        s.switch.attr("data-switch", $btn.attr("data-switch"));
+    };
+
+    s.switch.btn.click(s.changeState);
+}
+
 function Gallery(selector) {
     var g = $(this);
 
@@ -498,6 +516,7 @@ $(function () {
     var mobMenu = new MobileMenu(".mobile-header"),
         deskMenu = new DesktopMenu(".header"),
         timer = new Timer(".date-timer"),
+        switches = new Switch(".routes-and-location-block__switches"),
         gallery = new Gallery("#relatives"),
         placesSlider = new PlacesSlider(".time-and-place"),
         select = new Select("#select1"),

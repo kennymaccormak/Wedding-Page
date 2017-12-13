@@ -255,6 +255,10 @@
         left: 60px;
     }
 
+    .time-and-place .container {
+        max-width: none;
+    }
+
     .time-and-place-descriptions__buttons {
         display: none;
     }
